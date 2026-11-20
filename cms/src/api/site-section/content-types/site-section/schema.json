@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_sections",
+  "info": {
+    "singularName": "site-section",
+    "pluralName": "site-sections",
+    "displayName": "Site Section",
+    "description": "Website page sections synced from custom CMS"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

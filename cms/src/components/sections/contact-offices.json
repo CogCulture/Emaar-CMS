@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_contact_offices",
+  "info": {
+    "displayName": "Contact Offices List",
+    "icon": "map-marked-alt",
+    "description": "Global offices and sales centres listing"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.office-item"
+    }
+  }
+}

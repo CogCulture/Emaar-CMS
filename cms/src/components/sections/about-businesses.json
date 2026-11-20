@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_about_businesses",
+  "info": {
+    "displayName": "About Our Businesses",
+    "icon": "briefcase",
+    "description": "Business verticals cards (Hospitality, Retail, Destination, Leisure)"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.business-card"
+    }
+  }
+}

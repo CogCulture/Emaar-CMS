@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_sections_property_details",
+  "info": {
+    "displayName": "Property Detail",
+    "icon": "building",
+    "description": "Property hero banner, title, RERA disclaimers, and brochure/floorplan downloads"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "disclaimer": {
+      "type": "text"
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobile_hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "brochure_file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "floorplan_file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

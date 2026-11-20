@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_related_links",
+  "info": {
+    "displayName": "Related Link",
+    "icon": "link",
+    "description": "Navigation link card to other sections or pages"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

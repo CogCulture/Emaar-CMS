@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_contact_options",
+  "info": {
+    "displayName": "Contact Option",
+    "icon": "phone",
+    "description": "Reach-out channel option (phone, WhatsApp, email, enquiry)"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

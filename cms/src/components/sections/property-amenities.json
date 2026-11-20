@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_property_amenities",
+  "info": {
+    "displayName": "Property Amenities",
+    "icon": "heart",
+    "description": "Property lifestyle amenities with icons and labels"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.property-amenity"
+    }
+  }
+}

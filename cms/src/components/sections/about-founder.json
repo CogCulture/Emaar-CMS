@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_about_founders",
+  "info": {
+    "displayName": "About Founder",
+    "icon": "user-check",
+    "description": "Founder photo, quote, role and founder message link"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "action_label": {
+      "type": "string"
+    },
+    "action_href": {
+      "type": "string"
+    }
+  }
+}

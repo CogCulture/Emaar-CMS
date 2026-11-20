@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_faq_items",
+  "info": {
+    "displayName": "FAQ Item",
+    "icon": "question",
+    "description": "Question and answer pair or downloadable factsheet item"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "file_title": {
+      "type": "string"
+    },
+    "file_href": {
+      "type": "string"
+    }
+  }
+}

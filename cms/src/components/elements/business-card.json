@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_business_cards",
+  "info": {
+    "displayName": "Business Card",
+    "icon": "briefcase",
+    "description": "Business vertical card with image and link"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

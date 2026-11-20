@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Next.js build output & cache
+.next/
+*/.next/
+out/
+*/out/
+
+# Strapi temporary files & logs
+.tmp/
+*/.tmp/
+*.tmp
+*.log
+.cache/
+*/.cache/
+.strapi-updater.json
+*/.strapi-updater.json
+
+# Environment files
+.env
+.env.local
+*.env
+*.env.local
+!.env.example
+!*/.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backups
+*.backup
+*.bak
+.git_backup/
+*/.git_backup/
+.git_submodule_backup/
+*/.git_submodule_backup/

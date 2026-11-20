@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_showcase_tiles",
+  "info": {
+    "displayName": "Showcase Tile",
+    "icon": "images",
+    "description": "Category or destination tile with image and link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

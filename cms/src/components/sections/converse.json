@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_converse",
+  "info": {
+    "displayName": "Converse CTA",
+    "icon": "comments",
+    "description": "Call to action banner with background video and WhatsApp action"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "converse_video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos",
+        "files"
+      ]
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  }
+}

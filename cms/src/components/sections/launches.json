@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_launches",
+  "info": {
+    "displayName": "Launches Stack",
+    "icon": "layer-group",
+    "description": "Featured latest property launches with repeatable cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "cue": {
+      "type": "string"
+    },
+    "explore_label": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.launch-card"
+    }
+  }
+}

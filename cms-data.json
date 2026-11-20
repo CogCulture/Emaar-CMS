@@ -1,0 +1,2310 @@
+{
+  "settings": {
+    "site_logo": "/images/emaar-india-logo-en.svg",
+    "site_logo_alt": "Emaar India Official Logo",
+    "hero_video": "/videos/emaar-mobile.mp4",
+    "hero_video_type": "local",
+    "hero_search_placeholder": "Search by project, location or property type...",
+    "contact_phone": "+91 124 4421155",
+    "contact_email": "enquiries@emaar-india.com",
+    "brand_title": "Emaar India Limited"
+  },
+  "sections": {
+    "legacy_intro": {
+      "key": "legacy_intro",
+      "title": "BUILT ON LEGACY, DESIGNED FOR LIFE",
+      "subtitle": "Master developments across India",
+      "content": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and a commitment to excellence. Building on this global legacy, Emaar India continues to create distinctive spaces across residential and commercial destinations.",
+      "badge": "LEGACY"
+    },
+    "walkthrough": {
+      "key": "walkthrough",
+      "badge": "NEW",
+      "title": "PROJECT WALKTHROUGHS",
+      "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+      "image": "/images/project-walkthrough.jpg",
+      "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+      "cta_text": "EXPLORE",
+      "cta_link": "/walkthroughs"
+    },
+    "blogs": {
+      "key": "blogs",
+      "title": "Marbella",
+      "subtitle": "SIGNATURE LIVING, YOUR WAY",
+      "view_all_link": "/blogs",
+      "posts": [
+        {
+          "id": 1,
+          "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+          "image": "/images/blog1.jpg",
+          "link": "/blogs/bespoke-living"
+        },
+        {
+          "id": 2,
+          "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+          "image": "/images/blog2.jpg",
+          "link": "/blogs/digi-homes"
+        }
+      ],
+      "view_all_text": "VIEW ALL COMMUNITIES"
+    },
+    "header": {
+      "key": "header",
+      "phone": "+91 124 4421155",
+      "whatsapp": "+91 124 4421155",
+      "phone_icon": "/images/call.svg",
+      "whatsapp_icon": "/images/whatsapp.svg",
+      "cta_text": "SCHEDULE A VISIT",
+      "cta_action": "modal",
+      "cta_link": "/contact",
+      "cta2_text": "",
+      "cta2_action": "modal",
+      "cta2_link": "/properties",
+      "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EMAAR",
+      "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+      "projects_dropdown": "Residential, Commercial",
+      "logo": "/images/emaar-india-logo-en.svg",
+      "logo_alt": "Emaar India",
+      "sustainability_text": "SUSTAINABILITY",
+      "launches_text": "LATEST LAUNCHES",
+      "projects_text": "PROJECTS",
+      "about_text": "ABOUT EMAAR"
+    },
+    "footer": {
+      "key": "footer",
+      "logo": "/images/emaar-india-logo-en.svg",
+      "facebook": "https://facebook.com/emaarindia",
+      "twitter": "https://twitter.com/emaarindia",
+      "youtube": "https://youtube.com/emaarindia",
+      "instagram": "https://instagram.com/emaarindia",
+      "linkedin": "https://linkedin.com/company/emaar-india",
+      "news_placeholder": "Enter email",
+      "news_btn": "SUBSCRIBE",
+      "news_btn_bg": "#525252",
+      "news_btn_color": "#ffffff",
+      "col1_title": "ABOUT EMAAR",
+      "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+      "col2_title": "PROJECTS",
+      "col2_links": "Residential, Commercial",
+      "col3_title": "MASTER DEVELOPMENTS",
+      "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+      "col4_title": "LATEST LAUNCHES",
+      "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+      "col5_title": "EMAAR INTERNATIONAL",
+      "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+      "col6_title": "EMAAR HOSPITALITY",
+      "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+      "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language",
+      "tagline": "EXPLORE",
+      "actions": [
+        {
+          "label": "GET IN TOUCH",
+          "href": "#"
+        },
+        {
+          "label": "WHATSAPP",
+          "href": "https://wa.me/911234567890"
+        }
+      ],
+      "bottom": {
+        "copyright": "© 2026 Emaar India"
+      }
+    },
+    "hero": {
+      "title": "Emaar India",
+      "video": "/videos/emaar-mobile.mp4",
+      "subtitle": "PROPERLUXURY HOMESTY TYPE"
+    },
+    "communities": {
+      "title": "SIGNATURE LIVING, YOUR WAY",
+      "kicker": "Marbella"
+    },
+    "custom_sections": [],
+    "custom_slots": [],
+    "underDevelopment": {
+      "kicker": "Projects under development",
+      "title": "A Vision Taking Shape",
+      "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+    },
+    "developments": {
+      "kicker": "Landmark Developments",
+      "title": "Where Life Finds Its Place",
+      "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+    },
+    "communitiesIntro": {
+      "kicker": "Emaar Communities",
+      "title": "A World Designed Around Living",
+      "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+    },
+    "propertiesIntro": {
+      "kicker": "Emaar Properties",
+      "title": "More to Experience. More to Discover.",
+      "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+    },
+    "legacy": {
+      "title": "A Legacy Built on Vision",
+      "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+    },
+    "launches": {
+      "title": "Serenity Hills",
+      "kicker": "",
+      "lede": "GURUGRAM"
+    },
+    "showcase": {
+      "video": "/videos/emaar-destination.mp4"
+    },
+    "search": {
+      "submitLabel": "SEARCH",
+      "barLabels": [
+        {
+          "label": "PROPERTY TYPE",
+          "active": "Any"
+        },
+        {
+          "label": "CITY",
+          "active": "Any"
+        },
+        {
+          "label": "PRICE RANGE",
+          "active": "Any"
+        }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": 1,
+      "name": "SERENITY HILLS, GURUGRAM",
+      "slug": "emaar-serenity-hills",
+      "location": "Gurugram",
+      "category": "Residential",
+      "image": "/images/blog2.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+      "slug": "emaar-india-business-centre",
+      "location": "Gurugram",
+      "category": "Commercial",
+      "image": "/images/landmarks/business-centre.jpg",
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "name": "ELITE OASIS, LUCKNOW",
+      "slug": "elite-oasis",
+      "location": "Lucknow",
+      "category": "Residential",
+      "image": "/images/landmarks/elite-oasis.jpg",
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "name": "URBAN ASCENT, GURUGRAM",
+      "slug": "urban-ascent",
+      "location": "Gurugram",
+      "category": "Residential",
+      "image": "/images/landmarks/urban-ascent.jpg",
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+      "slug": "mohali-hills",
+      "location": "Mohali",
+      "category": "Plots",
+      "image": "/images/landmarks/mohali-hills.jpg",
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "name": "URBAN OASIS PHASE-4, GURUGRAM",
+      "slug": "urban-oasis-phase-4",
+      "location": "Gurugram",
+      "category": "Residential",
+      "image": "/images/landmarks/property-main-image-706x385.jpg",
+      "sort_order": 6
+    }
+  ],
+  "pages": [
+    {
+      "id": 1,
+      "title": "Home Page",
+      "slug": "/",
+      "template": "home",
+      "hero_banner": "/videos/emaar.mp4",
+      "hero_title": "Emaar India",
+      "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+      "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+      "status": "published",
+      "updated_at": "2026-11-18T10:23:43.048Z",
+      "sections": []
+    },
+    {
+      "id": 4,
+      "title": "Emaar Serenity Hills",
+      "slug": "/properties/emaar-serenity-hills",
+      "template": "property",
+      "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+      "hero_title": "Emaar Serenity Hills",
+      "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+      "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+      "status": "published",
+      "updated_at": "2026-10-06T06:42:50.380Z"
+    },
+    {
+      "id": 1794912070886,
+      "title": "New test",
+      "slug": "/properties/new-test-project",
+      "template": "property",
+      "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+      "hero_title": "New test",
+      "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+      "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+      "status": "draft",
+      "include_navbar": true,
+      "include_footer": true,
+      "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+      "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+      "brochure_url": "/docs/serenity-hills-brochure.pdf",
+      "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+      "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+      "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+      "overview_headline": "Where Light, Landscape and Calm Come Together.",
+      "sections": [],
+      "updated_at": "2026-11-17T11:21:03.595Z"
+    }
+  ],
+  "last_published_at": "2026-11-18T10:31:01.929Z",
+  "published": {
+    "settings": {
+      "site_logo": "/images/emaar-india-logo-en.svg",
+      "site_logo_alt": "Emaar India Official Logo",
+      "hero_video": "/videos/emaar-mobile.mp4",
+      "hero_video_type": "local",
+      "hero_search_placeholder": "Search by project, location or property type...",
+      "contact_phone": "+91 124 4421155",
+      "contact_email": "enquiries@emaar-india.com",
+      "brand_title": "Emaar India Limited"
+    },
+    "sections": {
+      "legacy_intro": {
+        "key": "legacy_intro",
+        "title": "BUILT ON LEGACY, DESIGNED FOR LIFE",
+        "subtitle": "Master developments across India",
+        "content": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and a commitment to excellence. Building on this global legacy, Emaar India continues to create distinctive spaces across residential and commercial destinations.",
+        "badge": "LEGACY"
+      },
+      "walkthrough": {
+        "key": "walkthrough",
+        "badge": "NEW",
+        "title": "PROJECT WALKTHROUGHS",
+        "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+        "image": "/images/project-walkthrough.jpg",
+        "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+        "cta_text": "EXPLORE",
+        "cta_link": "/walkthroughs"
+      },
+      "blogs": {
+        "key": "blogs",
+        "title": "Marbella",
+        "subtitle": "SIGNATURE LIVING, YOUR WAY",
+        "view_all_link": "/blogs",
+        "posts": [
+          {
+            "id": 1,
+            "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+            "image": "/images/blog1.jpg",
+            "link": "/blogs/bespoke-living"
+          },
+          {
+            "id": 2,
+            "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+            "image": "/images/blog2.jpg",
+            "link": "/blogs/digi-homes"
+          }
+        ],
+        "view_all_text": "VIEW ALL COMMUNITIES"
+      },
+      "header": {
+        "key": "header",
+        "phone": "+91 124 4421155",
+        "whatsapp": "+91 124 4421155",
+        "phone_icon": "/images/call.svg",
+        "whatsapp_icon": "/images/whatsapp.svg",
+        "cta_text": "SCHEDULE A VISIT",
+        "cta_action": "modal",
+        "cta_link": "/contact",
+        "cta2_text": "",
+        "cta2_action": "modal",
+        "cta2_link": "/properties",
+        "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EMAAR",
+        "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+        "projects_dropdown": "Residential, Commercial",
+        "logo": "/images/emaar-india-logo-en.svg",
+        "logo_alt": "Emaar India",
+        "sustainability_text": "SUSTAINABILITY",
+        "launches_text": "LATEST LAUNCHES",
+        "projects_text": "PROJECTS",
+        "about_text": "ABOUT EMAAR"
+      },
+      "footer": {
+        "key": "footer",
+        "logo": "/images/emaar-india-logo-en.svg",
+        "facebook": "https://facebook.com/emaarindia",
+        "twitter": "https://twitter.com/emaarindia",
+        "youtube": "https://youtube.com/emaarindia",
+        "instagram": "https://instagram.com/emaarindia",
+        "linkedin": "https://linkedin.com/company/emaar-india",
+        "news_placeholder": "Enter email",
+        "news_btn": "SUBSCRIBE",
+        "news_btn_bg": "#525252",
+        "news_btn_color": "#ffffff",
+        "col1_title": "ABOUT EMAAR",
+        "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+        "col2_title": "PROJECTS",
+        "col2_links": "Residential, Commercial",
+        "col3_title": "MASTER DEVELOPMENTS",
+        "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+        "col4_title": "LATEST LAUNCHES",
+        "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+        "col5_title": "EMAAR INTERNATIONAL",
+        "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+        "col6_title": "EMAAR HOSPITALITY",
+        "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+        "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language",
+        "tagline": "EXPLORE",
+        "actions": [
+          {
+            "label": "GET IN TOUCH",
+            "href": "#"
+          },
+          {
+            "label": "WHATSAPP",
+            "href": "https://wa.me/911234567890"
+          }
+        ],
+        "bottom": {
+          "copyright": "© 2026 Emaar India"
+        }
+      },
+      "hero": {
+        "title": "Emaar India",
+        "video": "/videos/emaar-mobile.mp4",
+        "subtitle": "PROPERLUXURY HOMESTY TYPE"
+      },
+      "communities": {
+        "title": "SIGNATURE LIVING, YOUR WAY",
+        "kicker": "Marbella"
+      },
+      "custom_sections": [],
+      "custom_slots": [],
+      "underDevelopment": {
+        "kicker": "Projects under development",
+        "title": "A Vision Taking Shape",
+        "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+      },
+      "developments": {
+        "kicker": "Landmark Developments",
+        "title": "Where Life Finds Its Place",
+        "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+      },
+      "communitiesIntro": {
+        "kicker": "Emaar Communities",
+        "title": "A World Designed Around Living",
+        "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+      },
+      "propertiesIntro": {
+        "kicker": "Emaar Properties",
+        "title": "More to Experience. More to Discover.",
+        "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+      },
+      "legacy": {
+        "title": "A Legacy Built on Vision",
+        "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+      },
+      "launches": {
+        "title": "Serenity Hills",
+        "kicker": "",
+        "lede": "GURUGRAM"
+      },
+      "showcase": {
+        "video": "/videos/emaar-destination.mp4"
+      },
+      "search": {
+        "submitLabel": "SEARCH",
+        "barLabels": [
+          {
+            "label": "PROPERTY TYPE",
+            "active": "Any"
+          },
+          {
+            "label": "CITY",
+            "active": "Any"
+          },
+          {
+            "label": "PRICE RANGE",
+            "active": "Any"
+          }
+        ]
+      }
+    },
+    "landmarks": [
+      {
+        "id": 1,
+        "name": "SERENITY HILLS, GURUGRAM",
+        "slug": "emaar-serenity-hills",
+        "location": "Gurugram",
+        "category": "Residential",
+        "image": "/images/blog2.jpg",
+        "sort_order": 1
+      },
+      {
+        "id": 2,
+        "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+        "slug": "emaar-india-business-centre",
+        "location": "Gurugram",
+        "category": "Commercial",
+        "image": "/images/landmarks/business-centre.jpg",
+        "sort_order": 2
+      },
+      {
+        "id": 3,
+        "name": "ELITE OASIS, LUCKNOW",
+        "slug": "elite-oasis",
+        "location": "Lucknow",
+        "category": "Residential",
+        "image": "/images/landmarks/elite-oasis.jpg",
+        "sort_order": 3
+      },
+      {
+        "id": 4,
+        "name": "URBAN ASCENT, GURUGRAM",
+        "slug": "urban-ascent",
+        "location": "Gurugram",
+        "category": "Residential",
+        "image": "/images/landmarks/urban-ascent.jpg",
+        "sort_order": 4
+      },
+      {
+        "id": 5,
+        "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+        "slug": "mohali-hills",
+        "location": "Mohali",
+        "category": "Plots",
+        "image": "/images/landmarks/mohali-hills.jpg",
+        "sort_order": 5
+      },
+      {
+        "id": 6,
+        "name": "URBAN OASIS PHASE-4, GURUGRAM",
+        "slug": "urban-oasis-phase-4",
+        "location": "Gurugram",
+        "category": "Residential",
+        "image": "/images/landmarks/property-main-image-706x385.jpg",
+        "sort_order": 6
+      }
+    ],
+    "pages": [
+      {
+        "id": 1,
+        "title": "Home Page",
+        "slug": "/",
+        "template": "home",
+        "hero_banner": "/videos/emaar.mp4",
+        "hero_title": "Emaar India",
+        "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+        "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+        "status": "published",
+        "updated_at": "2026-11-18T10:23:43.048Z",
+        "sections": []
+      },
+      {
+        "id": 4,
+        "title": "Emaar Serenity Hills",
+        "slug": "/properties/emaar-serenity-hills",
+        "template": "property",
+        "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+        "hero_title": "Emaar Serenity Hills",
+        "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+        "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+        "status": "published",
+        "updated_at": "2026-10-06T06:42:50.380Z"
+      },
+      {
+        "id": 1794912070886,
+        "title": "New test",
+        "slug": "/properties/new-test-project",
+        "template": "property",
+        "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+        "hero_title": "New test",
+        "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+        "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+        "status": "draft",
+        "include_navbar": true,
+        "include_footer": true,
+        "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+        "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+        "brochure_url": "/docs/serenity-hills-brochure.pdf",
+        "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+        "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+        "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+        "overview_headline": "Where Light, Landscape and Calm Come Together.",
+        "sections": [],
+        "updated_at": "2026-11-17T11:21:03.595Z"
+      }
+    ],
+    "sections_order": [
+      {
+        "id": "hero",
+        "name": "Hero Section & Search",
+        "visible": true
+      },
+      {
+        "id": "launches",
+        "name": "Latest Launches Stack",
+        "visible": true
+      },
+      {
+        "id": "developments",
+        "name": "Featured Developments Rail",
+        "visible": true
+      },
+      {
+        "id": "underDevelopment",
+        "name": "Under Development Rail",
+        "visible": true
+      },
+      {
+        "id": "communitiesIntro",
+        "name": "Communities Intro Stack",
+        "visible": true
+      },
+      {
+        "id": "communities",
+        "name": "Communities Collage",
+        "visible": true
+      },
+      {
+        "id": "propertiesIntro",
+        "name": "Properties Intro Stack",
+        "visible": true
+      },
+      {
+        "id": "showcase",
+        "name": "Showcase Mosaic",
+        "visible": true
+      },
+      {
+        "id": "legacy",
+        "name": "Legacy & Heritage Stats",
+        "visible": false
+      },
+      {
+        "id": "press",
+        "name": "Press Releases & News Rail",
+        "visible": false
+      },
+      {
+        "id": "converse",
+        "name": "Converse CTA & Contact",
+        "visible": false
+      }
+    ]
+  },
+  "staged_pending": false,
+  "staged_updated_at": 1794997861452,
+  "versions": [
+    {
+      "id": "v-1794997861929",
+      "version_number": "v6.0",
+      "title": "Version 6.0 - Live Release",
+      "published_at": "2026-11-18T10:31:01.929Z",
+      "published_by": "Admin",
+      "summary": "3 Pages • 6 Landmarks • Live Release",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar-mobile.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "key": "legacy_intro",
+            "title": "BUILT ON LEGACY, DESIGNED FOR LIFE",
+            "subtitle": "Master developments across India",
+            "content": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and a commitment to excellence. Building on this global legacy, Emaar India continues to create distinctive spaces across residential and commercial destinations.",
+            "badge": "LEGACY"
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "Marbella",
+            "subtitle": "SIGNATURE LIVING, YOUR WAY",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ],
+            "view_all_text": "VIEW ALL COMMUNITIES"
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_action": "modal",
+            "cta_link": "/contact",
+            "cta2_text": "",
+            "cta2_action": "modal",
+            "cta2_link": "/properties",
+            "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EMAAR",
+            "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "logo_alt": "Emaar India",
+            "sustainability_text": "SUSTAINABILITY",
+            "launches_text": "LATEST LAUNCHES",
+            "projects_text": "PROJECTS",
+            "about_text": "ABOUT EMAAR"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language",
+            "tagline": "EXPLORE",
+            "actions": [
+              {
+                "label": "GET IN TOUCH",
+                "href": "#"
+              },
+              {
+                "label": "WHATSAPP",
+                "href": "https://wa.me/911234567890"
+              }
+            ],
+            "bottom": {
+              "copyright": "© 2026 Emaar India"
+            }
+          },
+          "hero": {
+            "title": "Emaar India",
+            "video": "/videos/emaar-mobile.mp4",
+            "subtitle": "PROPERLUXURY HOMESTY TYPE"
+          },
+          "communities": {
+            "title": "SIGNATURE LIVING, YOUR WAY",
+            "kicker": "Marbella"
+          },
+          "custom_sections": [],
+          "custom_slots": [],
+          "underDevelopment": {
+            "kicker": "Projects under development",
+            "title": "A Vision Taking Shape",
+            "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+          },
+          "developments": {
+            "kicker": "Landmark Developments",
+            "title": "Where Life Finds Its Place",
+            "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+          },
+          "communitiesIntro": {
+            "kicker": "Emaar Communities",
+            "title": "A World Designed Around Living",
+            "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+          },
+          "propertiesIntro": {
+            "kicker": "Emaar Properties",
+            "title": "More to Experience. More to Discover.",
+            "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+          },
+          "legacy": {
+            "title": "A Legacy Built on Vision",
+            "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+          },
+          "launches": {
+            "title": "Serenity Hills",
+            "kicker": "",
+            "lede": "GURUGRAM"
+          },
+          "showcase": {
+            "video": "/videos/emaar-destination.mp4"
+          },
+          "search": {
+            "submitLabel": "SEARCH",
+            "barLabels": [
+              {
+                "label": "PROPERTY TYPE",
+                "active": "Any"
+              },
+              {
+                "label": "CITY",
+                "active": "Any"
+              },
+              {
+                "label": "PRICE RANGE",
+                "active": "Any"
+              }
+            ]
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-11-18T10:23:43.048Z",
+            "sections": []
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          },
+          {
+            "id": 1794912070886,
+            "title": "New test",
+            "slug": "/properties/new-test-project",
+            "template": "property",
+            "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+            "hero_title": "New test",
+            "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+            "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+            "status": "draft",
+            "include_navbar": true,
+            "include_footer": true,
+            "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+            "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+            "brochure_url": "/docs/serenity-hills-brochure.pdf",
+            "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+            "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+            "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+            "overview_headline": "Where Light, Landscape and Calm Come Together.",
+            "sections": [],
+            "updated_at": "2026-11-17T11:21:03.595Z"
+          }
+        ],
+        "sections_order": [
+          {
+            "id": "hero",
+            "name": "Hero Section & Search",
+            "visible": true
+          },
+          {
+            "id": "launches",
+            "name": "Latest Launches Stack",
+            "visible": true
+          },
+          {
+            "id": "developments",
+            "name": "Featured Developments Rail",
+            "visible": true
+          },
+          {
+            "id": "underDevelopment",
+            "name": "Under Development Rail",
+            "visible": true
+          },
+          {
+            "id": "communitiesIntro",
+            "name": "Communities Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "communities",
+            "name": "Communities Collage",
+            "visible": true
+          },
+          {
+            "id": "propertiesIntro",
+            "name": "Properties Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "showcase",
+            "name": "Showcase Mosaic",
+            "visible": true
+          },
+          {
+            "id": "legacy",
+            "name": "Legacy & Heritage Stats",
+            "visible": false
+          },
+          {
+            "id": "press",
+            "name": "Press Releases & News Rail",
+            "visible": false
+          },
+          {
+            "id": "converse",
+            "name": "Converse CTA & Contact",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-1794986769061",
+      "version_number": "v5.0",
+      "title": "Version 5.0 - Live Release",
+      "published_at": "2026-11-18T07:26:09.061Z",
+      "published_by": "Admin",
+      "summary": "3 Pages • 6 Landmarks • Live Release",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar-mobile.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "title": "Discover What’s Taking Shape",
+            "content": "<button type=\"button\" aria-haspopup=\"dialog\" class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112] bg-[#111112] text-white hover:bg-transparent hover:text-[#111112]\" style=\"pointer-events: auto !important; user-select: text !important;\">Register Interest</button><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-brochure.pdf\">View brochure</a><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-floorplan.pdf\">Floor plans</a>"
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "Marbella",
+            "subtitle": "SIGNATURE LIVING, YOUR WAY",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ],
+            "view_all_text": "VIEW ALL COMMUNITIES"
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_action": "modal",
+            "cta_link": "/contact",
+            "cta2_text": "",
+            "cta2_action": "modal",
+            "cta2_link": "/properties",
+            "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EMAAR",
+            "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "logo_alt": "Emaar India",
+            "sustainability_text": "SUSTAINABILITY",
+            "launches_text": "LATEST LAUNCHES",
+            "projects_text": "PROJECTS",
+            "about_text": "ABOUT EMAAR"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language"
+          },
+          "hero": {
+            "title": "Emaar India",
+            "video": "/videos/emaar-mobile.mp4"
+          },
+          "communities": {
+            "title": "SIGNATURE LIVING, YOUR WAY",
+            "kicker": "Marbella"
+          },
+          "custom_sections": [],
+          "custom_slots": [],
+          "underDevelopment": {
+            "kicker": "Projects under development",
+            "title": "A Vision Taking Shape",
+            "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+          },
+          "developments": {
+            "kicker": "Landmark Developments",
+            "title": "Where Life Finds Its Place",
+            "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+          },
+          "communitiesIntro": {
+            "kicker": "Emaar Communities",
+            "title": "A World Designed Around Living",
+            "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+          },
+          "propertiesIntro": {
+            "kicker": "Emaar Properties",
+            "title": "More to Experience. More to Discover.",
+            "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+          },
+          "legacy": {
+            "title": "A Legacy Built on Vision",
+            "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-11-18T07:25:59.882Z",
+            "sections": []
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          },
+          {
+            "id": 1794912070886,
+            "title": "New test",
+            "slug": "/properties/new-test-project",
+            "template": "property",
+            "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+            "hero_title": "New test",
+            "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+            "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+            "status": "draft",
+            "include_navbar": true,
+            "include_footer": true,
+            "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+            "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+            "brochure_url": "/docs/serenity-hills-brochure.pdf",
+            "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+            "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+            "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+            "overview_headline": "Where Light, Landscape and Calm Come Together.",
+            "sections": [],
+            "updated_at": "2026-11-17T11:21:03.595Z"
+          }
+        ],
+        "sections_order": [
+          {
+            "id": "hero",
+            "name": "Hero Section & Search",
+            "visible": true
+          },
+          {
+            "id": "launches",
+            "name": "Latest Launches Stack",
+            "visible": true
+          },
+          {
+            "id": "developments",
+            "name": "Featured Developments Rail",
+            "visible": true
+          },
+          {
+            "id": "underDevelopment",
+            "name": "Under Development Rail",
+            "visible": true
+          },
+          {
+            "id": "communitiesIntro",
+            "name": "Communities Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "communities",
+            "name": "Communities Collage",
+            "visible": true
+          },
+          {
+            "id": "propertiesIntro",
+            "name": "Properties Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "showcase",
+            "name": "Showcase Mosaic",
+            "visible": true
+          },
+          {
+            "id": "legacy",
+            "name": "Legacy & Heritage Stats",
+            "visible": false
+          },
+          {
+            "id": "press",
+            "name": "Press Releases & News Rail",
+            "visible": false
+          },
+          {
+            "id": "converse",
+            "name": "Converse CTA & Contact",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-1794986745236",
+      "version_number": "v4.0",
+      "title": "Version 4.0 - Live Release",
+      "published_at": "2026-11-18T07:25:45.238Z",
+      "published_by": "Admin",
+      "summary": "3 Pages • 6 Landmarks • Live Release",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar-mobile.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "title": "Discover What’s Taking Shape",
+            "content": "<button type=\"button\" aria-haspopup=\"dialog\" class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112] bg-[#111112] text-white hover:bg-transparent hover:text-[#111112]\" style=\"pointer-events: auto !important; user-select: text !important;\">Register Interest</button><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-brochure.pdf\">View brochure</a><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-floorplan.pdf\">Floor plans</a>"
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "Marbella",
+            "subtitle": "SIGNATURE LIVING, YOUR WAY",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ],
+            "view_all_text": "VIEW ALL COMMUNITIES"
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_action": "modal",
+            "cta_link": "/contact",
+            "cta2_text": "",
+            "cta2_action": "modal",
+            "cta2_link": "/properties",
+            "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EEMAAR",
+            "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "logo_alt": "Emaar India",
+            "sustainability_text": "SUSTAINABILITY",
+            "launches_text": "LATEST LAUNCHES",
+            "projects_text": "PROJECTS",
+            "about_text": "ABOUT EEMAAR"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language"
+          },
+          "hero": {
+            "title": "Emaar India",
+            "video": "/videos/emaar-mobile.mp4"
+          },
+          "communities": {
+            "title": "SIGNATURE LIVING, YOUR WAY",
+            "kicker": "Marbella"
+          },
+          "custom_sections": [],
+          "custom_slots": [],
+          "underDevelopment": {
+            "kicker": "Projects under development",
+            "title": "A Vision Taking Shape",
+            "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+          },
+          "developments": {
+            "kicker": "Landmark Developments",
+            "title": "Where Life Finds Its Place",
+            "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+          },
+          "communitiesIntro": {
+            "kicker": "Emaar Communities",
+            "title": "A World Designed Around Living",
+            "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+          },
+          "propertiesIntro": {
+            "kicker": "Emaar Properties",
+            "title": "More to Experience. More to Discover.",
+            "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+          },
+          "legacy": {
+            "title": "A Legacy Built on Vision",
+            "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-11-18T07:25:41.726Z",
+            "sections": []
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          },
+          {
+            "id": 1794912070886,
+            "title": "New test",
+            "slug": "/properties/new-test-project",
+            "template": "property",
+            "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+            "hero_title": "New test",
+            "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+            "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+            "status": "draft",
+            "include_navbar": true,
+            "include_footer": true,
+            "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+            "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+            "brochure_url": "/docs/serenity-hills-brochure.pdf",
+            "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+            "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+            "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+            "overview_headline": "Where Light, Landscape and Calm Come Together.",
+            "sections": [],
+            "updated_at": "2026-11-17T11:21:03.595Z"
+          }
+        ],
+        "sections_order": [
+          {
+            "id": "hero",
+            "name": "Hero Section & Search",
+            "visible": true
+          },
+          {
+            "id": "launches",
+            "name": "Latest Launches Stack",
+            "visible": true
+          },
+          {
+            "id": "developments",
+            "name": "Featured Developments Rail",
+            "visible": true
+          },
+          {
+            "id": "underDevelopment",
+            "name": "Under Development Rail",
+            "visible": true
+          },
+          {
+            "id": "communitiesIntro",
+            "name": "Communities Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "communities",
+            "name": "Communities Collage",
+            "visible": true
+          },
+          {
+            "id": "propertiesIntro",
+            "name": "Properties Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "showcase",
+            "name": "Showcase Mosaic",
+            "visible": true
+          },
+          {
+            "id": "legacy",
+            "name": "Legacy & Heritage Stats",
+            "visible": false
+          },
+          {
+            "id": "press",
+            "name": "Press Releases & News Rail",
+            "visible": false
+          },
+          {
+            "id": "converse",
+            "name": "Converse CTA & Contact",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-1794986716417",
+      "version_number": "v3.0",
+      "title": "Version 3.0 - Live Release",
+      "published_at": "2026-11-18T07:25:16.418Z",
+      "published_by": "Admin",
+      "summary": "3 Pages • 6 Landmarks • Live Release",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar-mobile.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "title": "Discover What’ Taking Shape",
+            "content": "<button type=\"button\" aria-haspopup=\"dialog\" class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112] bg-[#111112] text-white hover:bg-transparent hover:text-[#111112]\" style=\"pointer-events: auto !important; user-select: text !important;\">Register Interest</button><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-brochure.pdf\">View brochure</a><a class=\"inline-flex h-[51px] w-full items-center justify-center px-8 font-nav text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 sm:w-auto border border-[#111112]/35 bg-transparent text-[#111112] hover:bg-[#111112] hover:text-white\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"user-select: text !important; pointer-events: auto !important;\" data-cms-orig-href=\"/docs/serenity-hills-floorplan.pdf\">Floor plans</a>"
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "Marbella",
+            "subtitle": "SIGNATURE LIVING, YOUR WAY",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ],
+            "view_all_text": "VIEW ALL COMMUNITIES"
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_action": "modal",
+            "cta_link": "/contact",
+            "cta2_text": "",
+            "cta2_action": "modal",
+            "cta2_link": "/properties",
+            "nav_links": "LATEST LAUNCHES, PROJECTS, SUSTAINABILITY, ABOUT EMAAR",
+            "launches_dropdown": "Elara, Serenity Hills, India Business Centre, Elite Oasis, Casa Venero",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "logo_alt": "Emaar India",
+            "sustainability_text": "SUSTAINABILITY",
+            "launches_text": "LATEST LAUNCHES",
+            "projects_text": "PROJECTS",
+            "about_text": "ABOUT EMAAR"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language"
+          },
+          "hero": {
+            "title": "Emaar India",
+            "video": "/videos/emaar-mobile.mp4"
+          },
+          "communities": {
+            "title": "SIGNATURE LIVING, YOUR WAY",
+            "kicker": "Marbella"
+          },
+          "custom_sections": [],
+          "custom_slots": [],
+          "underDevelopment": {
+            "kicker": "Projects under development",
+            "title": "A Vision Taking Shape",
+            "lede": "Explore Emaar’s developments in the making, shaped by thoughtful design, purposeful planning and the promise of what lies ahead."
+          },
+          "developments": {
+            "kicker": "Landmark Developments",
+            "title": "Where Life Finds Its Place",
+            "lede": "From distinctive residences to vibrant destinations, each development is part of a wider vision for places that endure and communities that thrive."
+          },
+          "communitiesIntro": {
+            "kicker": "Emaar Communities",
+            "title": "A World Designed Around Living",
+            "lede": "Thoughtfully planned and shaped by their surroundings, Emaar communities bring together architecture, open spaces and meaningful everyday experiences."
+          },
+          "propertiesIntro": {
+            "kicker": "Emaar Properties",
+            "title": "More to Experience. More to Discover.",
+            "lede": "From distinctive residences to commercial destinations, Emaar brings together places designed for living, working and connecting."
+          },
+          "legacy": {
+            "title": "A Legacy Built on Vision",
+            "lede": "For decades, Emaar has shaped some of the world’s most recognisable landmarks through visionary architecture, thoughtful design and an unwavering commitment to excellence."
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-11-18T07:24:44.844Z",
+            "sections": []
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          },
+          {
+            "id": 1794912070886,
+            "title": "New test",
+            "slug": "/properties/new-test-project",
+            "template": "property",
+            "hero_banner": "/images/properties/emaar-serenity-hills/serenity-hills.webp",
+            "hero_title": "New test",
+            "hero_subtitle": "Nestled in prime surroundings, Gurugram.",
+            "content": "Spread across eight acres of open greens, this project brings together architecture, landscape, and emotion in perfect harmony. Homes here are designed to breathe, with wide balconies, open layouts, and the quiet assurance of light and space.",
+            "status": "draft",
+            "include_navbar": true,
+            "include_footer": true,
+            "hero_banner_mobile": "/images/properties/emaar-serenity-hills/project-banner.webp",
+            "hero_eyebrow": "COME HOME TO ACRES OF NATURE",
+            "brochure_url": "/docs/serenity-hills-brochure.pdf",
+            "floorplan_url": "/docs/serenity-hills-floorplan.pdf",
+            "rera_doc_url": "/docs/serenity-hills-rera.pdf",
+            "disclaimer": "PROMOTION | HRERA Registration No.: RC/REP/HARERA/GGM/993/725/2025/96 DATED. 16.10.2025 (website: www.haryanarera.gov.in)",
+            "overview_headline": "Where Light, Landscape and Calm Come Together.",
+            "sections": [],
+            "updated_at": "2026-11-17T11:21:03.595Z"
+          }
+        ],
+        "sections_order": [
+          {
+            "id": "hero",
+            "name": "Hero Section & Search",
+            "visible": true
+          },
+          {
+            "id": "launches",
+            "name": "Latest Launches Stack",
+            "visible": true
+          },
+          {
+            "id": "developments",
+            "name": "Featured Developments Rail",
+            "visible": true
+          },
+          {
+            "id": "underDevelopment",
+            "name": "Under Development Rail",
+            "visible": true
+          },
+          {
+            "id": "communitiesIntro",
+            "name": "Communities Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "communities",
+            "name": "Communities Collage",
+            "visible": true
+          },
+          {
+            "id": "propertiesIntro",
+            "name": "Properties Intro Stack",
+            "visible": true
+          },
+          {
+            "id": "showcase",
+            "name": "Showcase Mosaic",
+            "visible": true
+          },
+          {
+            "id": "legacy",
+            "name": "Legacy & Heritage Stats",
+            "visible": false
+          },
+          {
+            "id": "press",
+            "name": "Press Releases & News Rail",
+            "visible": false
+          },
+          {
+            "id": "converse",
+            "name": "Converse CTA & Contact",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-1791790212298",
+      "version_number": "v3.0",
+      "title": "Version 3.0 - Live Release",
+      "published_at": "2026-10-12T07:30:12.298Z",
+      "published_by": "Admin",
+      "summary": "2 Pages â€¢ 6 Landmarks â€¢ Live Release",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "content": "Master Developments<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"h-4 w-4 transition-transform duration-300 rotate-90\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"></path></svg>"
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "DISCOVER OUR BLOGS",
+            "subtitle": "READ INSIGHTS ON REAL ESTATE, LIFESTYLE, INVESTMENT AND THE PLACES SHAPING INDIA.",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ]
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_link": "/contact",
+            "nav_links": "ABOUT US, LATEST LAUNCHES, PROJECTS, SUSTAINABILITY",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language"
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-10-06T08:01:12.263Z"
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-baseline-1",
+      "version_number": "v1.0",
+      "title": "Version 1.0 - Initial Safe Baseline",
+      "published_at": "2026-10-09T13:19:43.790Z",
+      "published_by": "System Administrator",
+      "summary": "2 Pages â€¢ 6 Landmarks â€¢ Safe Baseline",
+      "snapshot": {
+        "settings": {
+          "site_logo": "/images/emaar-india-logo-en.svg",
+          "site_logo_alt": "Emaar India Official Logo",
+          "hero_video": "/videos/emaar.mp4",
+          "hero_video_type": "local",
+          "hero_search_placeholder": "Search by project, location or property type...",
+          "contact_phone": "+91 124 4421155",
+          "contact_email": "enquiries@emaar-india.com",
+          "brand_title": "Emaar India Limited"
+        },
+        "sections": {
+          "legacy_intro": {
+            "title": "\n          New Section Title\n        ",
+            "content": "For decades, Emaar has shaped some of the worldâ€™s most recognisable landmarks through visionary architecture, thoughtful design and a commitment to excellence. Building on this global legacy, Emaar India continues to create distinctive spaces across residential and commercial destinations. Each development reflects a shared belief in creating places that are designed to endure and inspire generations to come."
+          },
+          "walkthrough": {
+            "key": "walkthrough",
+            "badge": "NEW",
+            "title": "PROJECT WALKTHROUGHS",
+            "subtitle": "EXPLORE EMAAR INDIA FROM WHEREVER YOU ARE IN DETAIL.",
+            "image": "/images/project-walkthrough.jpg",
+            "content": "STEP INSIDE EMAAR INDIA'S PROPERTIES THROUGH IMMERSIVE WALKTHROUGHS AND EXPERIENCE THE SPACES BEFORE YOU ARRIVE.",
+            "cta_text": "EXPLORE",
+            "cta_link": "/walkthroughs"
+          },
+          "blogs": {
+            "key": "blogs",
+            "title": "DISCOVER OUR BLOGS",
+            "subtitle": "READ INSIGHTS ON REAL ESTATE, LIFESTYLE, INVESTMENT AND THE PLACES SHAPING INDIA.",
+            "view_all_link": "/blogs",
+            "posts": [
+              {
+                "id": 1,
+                "caption": "EMAAR INDIA: BESPOKE, LUXURIOUS & SUSTAINABLE LIVING",
+                "image": "/images/blog1.jpg",
+                "link": "/blogs/bespoke-living"
+              },
+              {
+                "id": 2,
+                "caption": "DIGI HOMES VS URBAN OASIS: SMART LUXURY IN SECTOR 62",
+                "image": "/images/blog2.jpg",
+                "link": "/blogs/digi-homes"
+              }
+            ]
+          },
+          "header": {
+            "key": "header",
+            "phone": "+91 124 4421155",
+            "whatsapp": "+91 124 4421155",
+            "phone_icon": "/images/call.svg",
+            "whatsapp_icon": "/images/whatsapp.svg",
+            "cta_text": "SCHEDULE A VISIT",
+            "cta_link": "/contact",
+            "nav_links": "ABOUT US, LATEST LAUNCHES, PROJECTS, SUSTAINABILITY",
+            "projects_dropdown": "Residential, Commercial",
+            "logo": "/images/emaar-india-logo-en.svg"
+          },
+          "footer": {
+            "key": "footer",
+            "logo": "/images/emaar-india-logo-en.svg",
+            "facebook": "https://facebook.com/emaarindia",
+            "twitter": "https://twitter.com/emaarindia",
+            "youtube": "https://youtube.com/emaarindia",
+            "instagram": "https://instagram.com/emaarindia",
+            "linkedin": "https://linkedin.com/company/emaar-india",
+            "news_placeholder": "Enter email",
+            "news_btn": "SUBSCRIBE",
+            "news_btn_bg": "#525252",
+            "news_btn_color": "#ffffff",
+            "col1_title": "ABOUT EMAAR",
+            "col1_links": "Who We Are, Leadership, Awards, Emaar Business, Emaar Foundation, Career, Investor Relations, Emaar Blogs, Media, Emaar Sustainability, E-Services, Contact Us, Compliance",
+            "col2_title": "PROJECTS",
+            "col2_links": "Residential, Commercial",
+            "col3_title": "MASTER DEVELOPMENTS",
+            "col3_links": "Gomti Greens, Savana by Indore Greens, Savana by Jaipur Greens",
+            "col4_title": "LATEST LAUNCHES",
+            "col4_links": "Emaar Serenity Hills, Urban Ascent, Elite Oasis, Emaar India Business Centre, Mohali Hills Residential Plots",
+            "col5_title": "EMAAR INTERNATIONAL",
+            "col5_links": "KSA, India, Pakistan, Egypt, Morocco, Turkey",
+            "col6_title": "EMAAR HOSPITALITY",
+            "col6_links": "Hotels & Resorts, Emaar Hospitality Club, Address Hotels, Vida Residences",
+            "legal_text": "Privacy Policy â€¢ Disclaimer â€¢ Terms & Conditions â€¢ Country & Language"
+          }
+        },
+        "landmarks": [
+          {
+            "id": 1,
+            "name": "SERENITY HILLS, GURUGRAM",
+            "slug": "emaar-serenity-hills",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/blog2.jpg",
+            "sort_order": 1
+          },
+          {
+            "id": 2,
+            "name": "EMAAR INDIA BUSINESS CENTRE, GURUGRAM",
+            "slug": "emaar-india-business-centre",
+            "location": "Gurugram",
+            "category": "Commercial",
+            "image": "/images/landmarks/business-centre.jpg",
+            "sort_order": 2
+          },
+          {
+            "id": 3,
+            "name": "ELITE OASIS, LUCKNOW",
+            "slug": "elite-oasis",
+            "location": "Lucknow",
+            "category": "Residential",
+            "image": "/images/landmarks/elite-oasis.jpg",
+            "sort_order": 3
+          },
+          {
+            "id": 4,
+            "name": "URBAN ASCENT, GURUGRAM",
+            "slug": "urban-ascent",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/urban-ascent.jpg",
+            "sort_order": 4
+          },
+          {
+            "id": 5,
+            "name": "MOHALI HILLS RESIDENTIAL PLOTS, MOHALI",
+            "slug": "mohali-hills",
+            "location": "Mohali",
+            "category": "Plots",
+            "image": "/images/landmarks/mohali-hills.jpg",
+            "sort_order": 5
+          },
+          {
+            "id": 6,
+            "name": "URBAN OASIS PHASE-4, GURUGRAM",
+            "slug": "urban-oasis-phase-4",
+            "location": "Gurugram",
+            "category": "Residential",
+            "image": "/images/landmarks/property-main-image-706x385.jpg",
+            "sort_order": 6
+          }
+        ],
+        "pages": [
+          {
+            "id": 1,
+            "title": "Home Page",
+            "slug": "/",
+            "template": "home",
+            "hero_banner": "/videos/emaar.mp4",
+            "hero_title": "Emaar India",
+            "hero_subtitle": "A Blend Of Lifestyle, Commercial Spaces & Residential Projects",
+            "content": "Main landing view featuring video hero, landmark slider, and discovery sections.",
+            "status": "published",
+            "updated_at": "2026-10-06T08:01:12.263Z"
+          },
+          {
+            "id": 4,
+            "title": "Emaar Serenity Hills",
+            "slug": "/properties/emaar-serenity-hills",
+            "template": "property",
+            "hero_banner": "/images/serenity-hills/serenity-banner-01.jpg",
+            "hero_title": "Emaar Serenity Hills",
+            "hero_subtitle": "Nestled at the foothills of the Aravallis, Gurugram.",
+            "content": "Exclusive residential apartments surrounded by green vistas and world-class amenities.",
+            "status": "published",
+            "updated_at": "2026-10-06T06:42:50.380Z"
+          }
+        ]
+      }
+    }
+  ],
+  "active_version_id": "v-1794997861929",
+  "leads": [
+    {
+      "id": "lead-1794917525871",
+      "name": "User Test",
+      "email": "test@example.com",
+      "phone": "+91 9876543210",
+      "source": "Get In Touch Modal",
+      "message": "Testing enquiry",
+      "status": "New",
+      "created_at": "2026-11-17T12:12:05.871Z"
+    },
+    {
+      "id": "lead-1794911256287",
+      "name": "test",
+      "email": "tusharrao619@gmail.com",
+      "phone": "+44 8826610864",
+      "source": "Website Modal (header)",
+      "message": "Customer submitted enquiry on official website",
+      "status": "New",
+      "created_at": "2026-11-17T10:27:36.287Z",
+      "updated_at": "2026-11-17T10:49:28.929Z"
+    },
+    {
+      "id": "lead-1794806787424",
+      "name": "test",
+      "email": "tusharrao619@gmail.com",
+      "phone": "+44 8826610864",
+      "source": "Website Modal (footer)",
+      "message": "Customer submitted enquiry on official website",
+      "status": "New",
+      "created_at": "2026-11-16T05:26:27.424Z"
+    }
+  ],
+  "media_titles": {},
+  "sections_order": [
+    {
+      "id": "hero",
+      "name": "Hero Section & Search",
+      "visible": true
+    },
+    {
+      "id": "launches",
+      "name": "Latest Launches Stack",
+      "visible": true
+    },
+    {
+      "id": "developments",
+      "name": "Featured Developments Rail",
+      "visible": true
+    },
+    {
+      "id": "underDevelopment",
+      "name": "Under Development Rail",
+      "visible": true
+    },
+    {
+      "id": "communitiesIntro",
+      "name": "Communities Intro Stack",
+      "visible": true
+    },
+    {
+      "id": "communities",
+      "name": "Communities Collage",
+      "visible": true
+    },
+    {
+      "id": "propertiesIntro",
+      "name": "Properties Intro Stack",
+      "visible": true
+    },
+    {
+      "id": "showcase",
+      "name": "Showcase Mosaic",
+      "visible": true
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy & Heritage Stats",
+      "visible": false
+    },
+    {
+      "id": "press",
+      "name": "Press Releases & News Rail",
+      "visible": false
+    },
+    {
+      "id": "converse",
+      "name": "Converse CTA & Contact",
+      "visible": false
+    }
+  ]
+}

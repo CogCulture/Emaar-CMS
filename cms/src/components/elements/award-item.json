@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_award_items",
+  "info": {
+    "displayName": "Award Item",
+    "icon": "award",
+    "description": "Featured recognition or award item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "by": {
+      "type": "string"
+    }
+  }
+}

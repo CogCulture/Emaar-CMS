@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_property_facts",
+  "info": {
+    "displayName": "Property Fact",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

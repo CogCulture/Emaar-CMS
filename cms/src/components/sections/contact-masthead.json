@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_contact_mastheads",
+  "info": {
+    "displayName": "Contact Masthead",
+    "icon": "phone",
+    "description": "Contact page header and office numbers"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "toll_free": {
+      "type": "string"
+    },
+    "international_phone": {
+      "type": "string"
+    }
+  }
+}

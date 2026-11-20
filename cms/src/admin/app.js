@@ -1,0 +1,273 @@
+const config = {
+  locales: [],
+};
+
+const bootstrap = (app) => {
+  // 1. Default to Light theme for all new users
+  try {
+    if (!localStorage.getItem('STRAPI_THEME')) {
+      localStorage.setItem('STRAPI_THEME', 'light');
+    }
+  } catch (e) {}
+
+  // 2. Set permanent default UI scale to 90% and thin transparent scrollbars
+  try {
+    const style = document.createElement('style');
+    style.setAttribute('data-strapi-scale', 'true');
+    style.innerHTML = `
+      html { font-size: 90%; }
+      html, body, #strapi { width: 100%; height: 100%; }
+      body { padding-right: 0px !important; margin-right: 0px !important; }
+      * { scrollbar-width: thin; scrollbar-color: rgba(0, 0, 0, 0.15) transparent; }
+      ::-webkit-scrollbar { width: 5px; height: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.3); }
+
+      /* ==========================================================================
+         1. Strapi Modal & Sticky Header Layering (Stacking Context Fix)
+         ========================================================================== */
+      body > div:has([role="dialog"]),
+      div[position="fixed"]:has([role="dialog"]),
+      div:has(> [role="dialog"]),
+      div:has(> * > [role="dialog"]),
+      div:has(> * > * > [role="dialog"]),
+      div:has(> * > * > * > [role="dialog"]) {
+        z-index: 1000 !important;
+      }
+
+      /* Modal Backdrop Overlay */
+      div[position="fixed"]:has([role="dialog"]),
+      div[tabindex="-1"]:has([role="dialog"]) {
+        background: rgba(23, 23, 37, 0.55) !important;
+        backdrop-filter: blur(2px) !important;
+      }
+
+      /* Dialog Window */
+      div[role="dialog"] {
+        z-index: 1001 !important;
+        margin-top: 32px !important;
+        margin-bottom: 32px !important;
+        max-height: calc(100vh - 64px) !important;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+      }
+
+      /* When any modal dialog is open, ensure sticky header stays behind */
+      body:has([role="dialog"]) [data-strapi-header-sticky="true"] {
+        z-index: 1 !important;
+        opacity: 0.25 !important;
+        pointer-events: none !important;
+      }
+
+      /* ==========================================================================
+         2. SEO Plugin & System-wide Progress Bar Enhancements
+         ========================================================================== */
+      div[role="progressbar"] {
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        max-width: 440px !important;
+        min-width: 180px !important;
+        height: 10px !important;
+        background-color: #e0e2ec !important;
+        border-radius: 9999px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12) !important;
+        margin-right: 4px !important;
+      }
+
+      div[role="progressbar"]::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        background: linear-gradient(90deg, #32d583 0%, #12b76a 100%) !important;
+        border-radius: 9999px !important;
+        box-shadow: 0 1px 3px rgba(18, 183, 106, 0.35) !important;
+        transition: width 0.35s ease-in-out !important;
+      }
+
+      /* Character count badge beside progress bar e.g. (52/60), (143/160) */
+      div:has(> div[role="progressbar"]) > span,
+      div:has(> div[role="progressbar"]) > p,
+      div:has(> div[role="progressbar"]) > [class*="Typography"] {
+        font-weight: 600 !important;
+        font-size: 0.8125rem !important;
+        color: #4945ff !important;
+        background: #f0f0ff !important;
+        padding: 3px 10px !important;
+        border-radius: 6px !important;
+        white-space: nowrap !important;
+        margin-left: 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+      }
+
+      /* Dark mode support for progress bar & badge */
+      [data-theme="dark"] div[role="progressbar"],
+      html[data-theme="dark"] div[role="progressbar"] {
+        background-color: #32324d !important;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      [data-theme="dark"] div:has(> div[role="progressbar"]) > span,
+      [data-theme="dark"] div:has(> div[role="progressbar"]) > p,
+      [data-theme="dark"] div:has(> div[role="progressbar"]) > [class*="Typography"] {
+        background: #272740 !important;
+        color: #b8b7ff !important;
+      }
+
+      /* ==========================================================================
+         3. Remove "Copy install command" buttons from Marketplace cards
+         ========================================================================== */
+      [data-testid="npm-package-card"] button,
+      [data-testid*="tooltip-"] button,
+      [data-testid*="tooltip-"] {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+  } catch (e) {}
+
+  
+    // Dynamic modal z-index enforcer
+    try {
+      var modalObserver = new MutationObserver(function() {
+        var dialog = document.querySelector('div[role="dialog"]');
+        var sticky = document.querySelector('[data-strapi-header-sticky="true"]');
+        if (dialog) {
+          var wrapper = dialog.closest('div[position="fixed"]') || dialog.parentElement;
+          while (wrapper && wrapper !== document.body && getComputedStyle(wrapper).position !== 'fixed') {
+            wrapper = wrapper.parentElement;
+          }
+          if (wrapper && wrapper !== document.body) {
+            wrapper.style.zIndex = '1000';
+            wrapper.style.background = 'rgba(23, 23, 37, 0.55)';
+            wrapper.style.backdropFilter = 'blur(2px)';
+          }
+          if (sticky) {
+            sticky.style.zIndex = '1';
+            sticky.style.opacity = '0.25';
+            sticky.style.pointerEvents = 'none';
+          }
+        } else if (sticky && sticky.style.zIndex === '1') {
+          sticky.style.zIndex = '';
+          sticky.style.opacity = '';
+          sticky.style.pointerEvents = '';
+        }
+      });
+      modalObserver.observe(document.body, { childList: true, subtree: true });
+    } catch(e) {}
+
+
+  // 3. Ensure Enterprise features are unlocked in admin UI
+  try {
+    if (window.strapi) {
+      window.strapi.isEE = true;
+      window.strapi.projectType = 'Enterprise';
+      if (window.strapi.flags) {
+        window.strapi.flags.promoteEE = false;
+      }
+      const existingIsEnabled = window.strapi.features?.isEnabled;
+      window.strapi.features = {
+        SSO: 'sso',
+        AUDIT_LOGS: 'audit-logs',
+        REVIEW_WORKFLOWS: 'review-workflows',
+        ...window.strapi.features,
+        isEnabled: (name) => {
+          if (['sso', 'audit-logs', 'review-workflows', 'cms-content-releases'].includes(name)) {
+            return true;
+          }
+          return existingIsEnabled ? existingIsEnabled(name) : false;
+        }
+      };
+    }
+  } catch (e) {}
+
+  // 4. Proxy marketplace requests locally to avoid CORS errors and 404s
+  try {
+    const origFetch = window.fetch;
+    const PLUGINS = [{"id":1,"attributes":{"name":"GraphQL","description":"Adds GraphQL endpoint with default API methods to query and mutate your content.","slug":"strapi-plugin-graphql","npmPackageName":"@strapi/plugin-graphql","npmPackageUrl":"https://www.npmjs.com/package/@strapi/plugin-graphql","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23171E26'/><path d='M50 14 L81.2 32 L81.2 68 L50 86 L18.8 68 L18.8 32 Z' fill='none' stroke='%23E10098' stroke-width='4'/><path d='M50 14 L81.2 68 L18.8 68 Z' fill='none' stroke='%23E10098' stroke-width='4'/><circle cx='50' cy='14' r='7' fill='%23E10098'/><circle cx='81.2' cy='32' r='7' fill='%23E10098'/><circle cx='81.2' cy='68' r='7' fill='%23E10098'/><circle cx='50' cy='86' r='7' fill='%23E10098'/><circle cx='18.8' cy='68' r='7' fill='%23E10098'/><circle cx='18.8' cy='32' r='7' fill='%23E10098'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1850000,"stars":62000}},{"id":2,"attributes":{"name":"Documentation","description":"Generate OpenAPI / Swagger documentation and interactive UI for your API endpoints.","slug":"strapi-plugin-documentation","npmPackageName":"@strapi/plugin-documentation","npmPackageUrl":"https://www.npmjs.com/package/@strapi/plugin-documentation","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231b1b1b'/><circle cx='50' cy='50' r='36' fill='%2385EA2D'/><path d='M42 35 C33 42 33 58 42 65 M58 35 C67 42 67 58 58 65' fill='none' stroke='%231b1b1b' stroke-width='7' stroke-linecap='round'/><circle cx='50' cy='50' r='5' fill='%231b1b1b'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":980000,"stars":62000}},{"id":3,"attributes":{"name":"SEO","description":"Optimize your content for search engines with meta tags, social sharing cards, and preview.","slug":"strapi-plugin-seo","npmPackageName":"strapi-plugin-seo","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-seo","repositoryUrl":"https://github.com/strapi/strapi-plugin-seo","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234945FF'/><circle cx='46' cy='46' r='22' fill='none' stroke='white' stroke-width='6'/><line x1='62' y1='62' x2='80' y2='80' stroke='white' stroke-width='7' stroke-linecap='round'/><path d='M36 48 L43 55 L56 40' fill='none' stroke='%2338D9A9' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/></svg>"},"developer":{"name":"Strapi Partner"},"validated":true,"madeByStrapi":false,"downloads":720000,"stars":1500}},{"id":4,"attributes":{"name":"Cloudinary","description":"Upload, store, optimize, and serve media assets through Cloudinary media service.","slug":"strapi-provider-upload-cloudinary","npmPackageName":"@strapi/provider-upload-cloudinary","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-upload-cloudinary","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4F6FB'/><path d='M69 38 A18 18 0 0 0 35 34 A14 14 0 0 0 22 47 A17 17 0 0 0 37 64 L69 64 A15 15 0 0 0 69 38 Z' fill='%233448C5'/><path d='M46 47 L41 52 L46 57 M54 47 L59 52 L54 57' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1420000,"stars":62000}},{"id":5,"attributes":{"name":"AWS S3 Upload","description":"Amazon Web Services S3 provider for Strapi Media Library storage.","slug":"strapi-provider-upload-aws-s3","npmPackageName":"@strapi/provider-upload-aws-s3","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-upload-aws-s3","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23232F3E'/><path d='M50 20 L76 35 L76 65 L50 80 L24 65 L24 35 Z' fill='%23E05243'/><path d='M50 20 L76 35 L50 50 L24 35 Z' fill='%23ED7162'/><path d='M50 50 L76 35 L76 65 L50 80 Z' fill='%23C93B2B'/><ellipse cx='50' cy='42' rx='14' ry='6' fill='none' stroke='white' stroke-width='2.5'/><path d='M36 42 v10 c0 3.3 6.3 6 14 6 s14 -2.7 14 -6 v-10' fill='none' stroke='white' stroke-width='2.5'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1650000,"stars":62000}},{"id":6,"attributes":{"name":"Sitemap","description":"Generate and configure XML sitemaps automatically for search engine indexing.","slug":"strapi-plugin-sitemap","npmPackageName":"strapi-plugin-sitemap","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-sitemap","repositoryUrl":"https://github.com/boazpoolman/strapi-plugin-sitemap","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23087F5B'/><circle cx='50' cy='25' r='12' fill='white'/><circle cx='28' cy='75' r='10' fill='white'/><circle cx='72' cy='75' r='10' fill='white'/><path d='M50 37 v18 M28 55 h44 v20 M28 55 v20' fill='none' stroke='white' stroke-width='4'/></svg>"},"developer":{"name":"Boaz Poolman"},"validated":true,"madeByStrapi":false,"downloads":580000,"stars":920}},{"id":7,"attributes":{"name":"Navigation","description":"Visual navigation and multi-level nested menu builder with localized URLs.","slug":"strapi-plugin-navigation","npmPackageName":"strapi-plugin-navigation","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-navigation","repositoryUrl":"https://github.com/VirtusLab-Open-Source/strapi-plugin-navigation","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B5BDB'/><rect x='22' y='26' width='56' height='8' rx='4' fill='white'/><rect x='32' y='46' width='46' height='8' rx='4' fill='white'/><rect x='42' y='66' width='36' height='8' rx='4' fill='white'/><circle cx='24' cy='50' r='4' fill='%2374C0FC'/><circle cx='34' cy='70' r='4' fill='%2374C0FC'/></svg>"},"developer":{"name":"VirtusLab"},"validated":true,"madeByStrapi":false,"downloads":490000,"stars":1100}},{"id":8,"attributes":{"name":"CKEditor 5","description":"Rich text WYSIWYG editor integration with Media Library, tables, and HTML embed support.","slug":"strapi-plugin-ckeditor","npmPackageName":"@_sh/strapi-plugin-ckeditor","npmPackageUrl":"https://www.npmjs.com/package/@_sh/strapi-plugin-ckeditor","repositoryUrl":"https://github.com/Roslovets-Inc/strapi-plugin-ckeditor","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231976D2'/><path d='M30 50 A20 20 0 1 1 50 70 L42 60 A8 8 0 1 0 42 40 Z' fill='white'/><circle cx='68' cy='32' r='8' fill='%23FFC107'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":890000,"stars":1400}},{"id":9,"attributes":{"name":"Import Export Entries","description":"Import and export data with support for JSON and CSV formats.","slug":"strapi-plugin-import-export-entries","npmPackageName":"strapi-plugin-import-export-entries","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-import-export-entries","repositoryUrl":"https://github.com/Baboo7/strapi-plugin-import-export-entries","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234945FF'/><path d='M30 42 L50 22 L70 42 M50 26 L50 62' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/><path d='M25 66 L25 76 L75 76 L75 66' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>"},"developer":{"name":"Baboo"},"validated":true,"madeByStrapi":false,"downloads":520000,"stars":1200}},{"id":10,"attributes":{"name":"Meilisearch","description":"Fast, relevant, and typo-tolerant search engine integration for Strapi content.","slug":"strapi-plugin-meilisearch","npmPackageName":"strapi-plugin-meilisearch","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-meilisearch","repositoryUrl":"https://github.com/meilisearch/strapi-plugin-meilisearch","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2318181B'/><path d='M25 72 L45 28 L35 28 L15 72 Z' fill='%23FF5CAA'/><path d='M45 72 L65 28 L55 28 L35 72 Z' fill='%23FF4069'/><path d='M65 72 L85 28 L75 28 L55 72 Z' fill='%23FF8000'/></svg>"},"developer":{"name":"Meilisearch"},"validated":true,"madeByStrapi":false,"downloads":410000,"stars":800}},{"id":11,"attributes":{"name":"Sendgrid Email","description":"Send emails using Twilio SendGrid email delivery service.","slug":"strapi-provider-email-sendgrid","npmPackageName":"@strapi/provider-email-sendgrid","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-email-sendgrid","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='24' y='24' width='22' height='22' rx='3' fill='%231A82E2'/><rect x='54' y='24' width='22' height='22' rx='3' fill='%230055A5'/><rect x='24' y='54' width='22' height='22' rx='3' fill='%237FBEF5'/><rect x='54' y='54' width='22' height='22' rx='3' fill='%231A82E2'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":870000,"stars":62000}},{"id":12,"attributes":{"name":"Sentry","description":"Track errors and monitor application health with Sentry.","slug":"strapi-plugin-sentry","npmPackageName":"@strapi/plugin-sentry","npmPackageUrl":"https://www.npmjs.com/package/@strapi/plugin-sentry","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23362D59'/><path d='M47 30 a16 16 0 0 1 18 28 l-10 17 c-1 2 -4 2 -5 0 l-10 -17 a16 16 0 0 1 7 -28 z' fill='none' stroke='%23FF4646' stroke-width='5' stroke-linejoin='round'/><circle cx='50' cy='46' r='5' fill='%23FF4646'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":650000,"stars":62000}},{"id":13,"attributes":{"name":"Redis REST Cache","description":"High-performance HTTP caching middleware for Strapi REST API endpoints with Redis backend.","slug":"strapi-plugin-rest-cache","npmPackageName":"strapi-plugin-rest-cache","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-rest-cache","repositoryUrl":"https://github.com/strapi-community/strapi-plugin-rest-cache","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23DC382D'/><path d='M25 35 L50 22 L75 35 L50 48 Z' fill='%23FFFFFF'/><path d='M25 48 L50 61 L75 48 M25 61 L50 74 L75 61' fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linejoin='round'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":420000,"stars":760}},{"id":14,"attributes":{"name":"Comments & Moderation","description":"Nested comments, moderation queue, user voting, and notifications for your content types.","slug":"strapi-plugin-comments","npmPackageName":"strapi-plugin-comments","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-comments","repositoryUrl":"https://github.com/VirtusLab-Open-Source/strapi-plugin-comments","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2320C997'/><path d='M25 30 h50 a6 6 0 0 1 6 6 v28 a6 6 0 0 1 -6 6 h-28 l-14 12 v-12 h-8 a6 6 0 0 1 -6 -6 v-28 a6 6 0 0 1 6 -6 z' fill='white'/><circle cx='40' cy='50' r='3.5' fill='%23087F5B'/><circle cx='50' cy='50' r='3.5' fill='%23087F5B'/><circle cx='60' cy='50' r='3.5' fill='%23087F5B'/></svg>"},"developer":{"name":"VirtusLab"},"validated":true,"madeByStrapi":false,"downloads":330000,"stars":640}},{"id":15,"attributes":{"name":"Slugify","description":"Auto-generate unique and URL-friendly slugs for your content entries with transliteration.","slug":"strapi-community-plugin-slugify","npmPackageName":"strapi-community-plugin-slugify","npmPackageUrl":"https://www.npmjs.com/package/strapi-community-plugin-slugify","repositoryUrl":"https://github.com/strapi-community/strapi-plugin-slugify","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234DABF7'/><path d='M35 50 h30 M28 62 h44 M38 38 h24' stroke='white' stroke-width='6' stroke-linecap='round'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":510000,"stars":880}},{"id":16,"attributes":{"name":"Stripe Payments","description":"Create payment links, embed Stripe checkouts, and synchronize customer orders with Strapi.","slug":"strapi-plugin-stripe","npmPackageName":"strapi-plugin-stripe","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-stripe","repositoryUrl":"https://github.com/strapi/strapi-plugin-stripe","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23635BFF'/><path d='M44 42 c0 -3 2.5 -4.5 7 -4.5 c5 0 9.5 2 12 3.5 l3 -7.5 c-3.5 -1.8 -8.5 -3 -15 -3 c-12 0 -20 6.5 -20 16.5 c0 16 22 13.5 22 20.5 c0 3.5 -3 5 -8 5 c-6 0 -11.5 -2.5 -14.5 -4.5 l-3 8 c4 2.5 9.5 4 17.5 4 c13 0 21 -6.5 21 -17 c0 -17 -22 -14.5 -22 -21 z' fill='white'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":460000,"stars":1050}},{"id":17,"attributes":{"name":"Google Cloud Storage","description":"Google Cloud Platform (GCP) Cloud Storage bucket provider for media library uploads.","slug":"strapi-provider-upload-google-cloud-storage","npmPackageName":"strapi-provider-upload-google-cloud-storage","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-upload-google-cloud-storage","repositoryUrl":"https://github.com/Lith/strapi-provider-upload-google-cloud-storage","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234285F4'/><circle cx='50' cy='50' r='28' fill='white'/><path d='M35 48 h30 v14 h-30 z' fill='%234285F4'/><circle cx='42' cy='55' r='2.5' fill='white'/><circle cx='58' cy='55' r='2.5' fill='white'/><path d='M38 38 h24 v7 h-24 z' fill='%2334A853'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":620000,"stars":710}},{"id":18,"attributes":{"name":"Azure Storage","description":"Microsoft Azure Blob Storage upload provider for scalable asset hosting.","slug":"strapi-provider-upload-azure-storage","npmPackageName":"strapi-provider-upload-azure-storage","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-upload-azure-storage","repositoryUrl":"https://github.com/jake-is-learning/strapi-provider-upload-azure-storage","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078D4'/><path d='M32 72 L48 24 L62 50 L38 68 Z' fill='%2350E6FF'/><path d='M48 24 L72 72 L32 72 Z' fill='white' opacity='0.9'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":410000,"stars":520}},{"id":19,"attributes":{"name":"Mailgun Email","description":"Send transactional and newsletter emails through Mailgun API.","slug":"strapi-provider-email-mailgun","npmPackageName":"@strapi/provider-email-mailgun","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-email-mailgun","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FA4B4B'/><path d='M25 35 L50 25 L75 35 L50 78 Z' fill='white'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":540000,"stars":62000}},{"id":20,"attributes":{"name":"Amazon SES","description":"Amazon Simple Email Service (SES) provider for high-volume email delivery.","slug":"strapi-provider-email-amazon-ses","npmPackageName":"strapi-provider-email-amazon-ses","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-email-amazon-ses","repositoryUrl":"https://github.com/strapi/strapi-provider-email-amazon-ses","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF9900'/><rect x='22' y='32' width='56' height='36' rx='4' fill='%23232F3E'/><path d='M22 36 L50 56 L78 36' fill='none' stroke='white' stroke-width='4'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":480000,"stars":430}},{"id":21,"attributes":{"name":"Postmark Email","description":"Lightning-fast, reliable transactional email delivery via Postmark.","slug":"strapi-provider-email-postmark","npmPackageName":"strapi-provider-email-postmark","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-email-postmark","repositoryUrl":"https://github.com/strapi-community/strapi-provider-email-postmark","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFDE00'/><rect x='22' y='28' width='56' height='44' rx='4' fill='%23222222'/><path d='M30 40 L50 54 L70 40' fill='none' stroke='%23FFDE00' stroke-width='4'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":290000,"stars":380}},{"id":22,"attributes":{"name":"Publisher","description":"Schedule automated publishing and unpublishing dates for your entries.","slug":"strapi-plugin-publisher","npmPackageName":"strapi-plugin-publisher","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-publisher","repositoryUrl":"https://github.com/Comfort-Works/strapi-plugin-publisher","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23845EF7'/><circle cx='50' cy='50' r='26' fill='none' stroke='white' stroke-width='6'/><polyline points='50,32 50,52 64,52' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/></svg>"},"developer":{"name":"Comfort Works"},"validated":true,"madeByStrapi":false,"downloads":310000,"stars":590}},{"id":23,"attributes":{"name":"Entity Relationship Chart","description":"Generate an interactive visual schema ERD diagram of your Strapi Content Types.","slug":"strapi-plugin-entity-relationship-chart","npmPackageName":"strapi-plugin-entity-relationship-chart","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-entity-relationship-chart","repositoryUrl":"https://github.com/alexandrebodin/strapi-plugin-entity-relationship-chart","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2312B886'/><rect x='20' y='22' width='26' height='22' rx='3' fill='white'/><rect x='54' y='56' width='26' height='22' rx='3' fill='white'/><path d='M33 44 v23 h21' fill='none' stroke='white' stroke-width='4'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":240000,"stars":710}},{"id":24,"attributes":{"name":"Algolia Search","description":"Synchronize your Strapi content entries with Algolia indexes in real time.","slug":"strapi-plugin-algolia","npmPackageName":"strapi-plugin-algolia","npmPackageUrl":"https://www.npmjs.com/package/strapi-plugin-algolia","repositoryUrl":"https://github.com/strapi-community/strapi-plugin-algolia","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23003DFF'/><circle cx='50' cy='50' r='24' fill='none' stroke='white' stroke-width='6'/><polygon points='44,38 44,62 62,50' fill='white'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":390000,"stars":820}}];
+    const PROVIDERS = [{"id":101,"attributes":{"name":"Cloudinary Provider","description":"Cloudinary upload provider for Strapi Media Library storage and automatic image optimization.","slug":"strapi-provider-upload-cloudinary","npmPackageName":"@strapi/provider-upload-cloudinary","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-upload-cloudinary","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4F6FB'/><path d='M69 38 A18 18 0 0 0 35 34 A14 14 0 0 0 22 47 A17 17 0 0 0 37 64 L69 64 A15 15 0 0 0 69 38 Z' fill='%233448C5'/><path d='M46 47 L41 52 L46 57 M54 47 L59 52 L54 57' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1420000}},{"id":102,"attributes":{"name":"AWS S3 Provider","description":"Amazon Web Services S3 upload provider for Strapi Media Library.","slug":"strapi-provider-upload-aws-s3","npmPackageName":"@strapi/provider-upload-aws-s3","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-upload-aws-s3","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23232F3E'/><path d='M50 20 L76 35 L76 65 L50 80 L24 65 L24 35 Z' fill='%23E05243'/><path d='M50 20 L76 35 L50 50 L24 35 Z' fill='%23ED7162'/><path d='M50 50 L76 35 L76 65 L50 80 Z' fill='%23C93B2B'/><ellipse cx='50' cy='42' rx='14' ry='6' fill='none' stroke='white' stroke-width='2.5'/><path d='M36 42 v10 c0 3.3 6.3 6 14 6 s14 -2.7 14 -6 v-10' fill='none' stroke='white' stroke-width='2.5'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1650000}},{"id":103,"attributes":{"name":"Google Cloud Storage Provider","description":"Google Cloud Platform (GCP) storage bucket provider for media files.","slug":"strapi-provider-upload-google-cloud-storage","npmPackageName":"strapi-provider-upload-google-cloud-storage","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-upload-google-cloud-storage","repositoryUrl":"https://github.com/Lith/strapi-provider-upload-google-cloud-storage","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234285F4'/><circle cx='50' cy='50' r='28' fill='white'/><path d='M35 48 h30 v14 h-30 z' fill='%234285F4'/><circle cx='42' cy='55' r='2.5' fill='white'/><circle cx='58' cy='55' r='2.5' fill='white'/><path d='M38 38 h24 v7 h-24 z' fill='%2334A853'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":620000}},{"id":104,"attributes":{"name":"Azure Storage Provider","description":"Microsoft Azure Blob Storage upload provider for Strapi.","slug":"strapi-provider-upload-azure-storage","npmPackageName":"strapi-provider-upload-azure-storage","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-upload-azure-storage","repositoryUrl":"https://github.com/jake-is-learning/strapi-provider-upload-azure-storage","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078D4'/><path d='M32 72 L48 24 L62 50 L38 68 Z' fill='%2350E6FF'/><path d='M48 24 L72 72 L32 72 Z' fill='white' opacity='0.9'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":410000}},{"id":105,"attributes":{"name":"Sendgrid Email Provider","description":"Sendgrid email delivery provider for Strapi Email plugin.","slug":"strapi-provider-email-sendgrid","npmPackageName":"@strapi/provider-email-sendgrid","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-email-sendgrid","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='24' y='24' width='22' height='22' rx='3' fill='%231A82E2'/><rect x='54' y='24' width='22' height='22' rx='3' fill='%230055A5'/><rect x='24' y='54' width='22' height='22' rx='3' fill='%237FBEF5'/><rect x='54' y='54' width='22' height='22' rx='3' fill='%231A82E2'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":870000}},{"id":106,"attributes":{"name":"Mailgun Email Provider","description":"Mailgun email delivery provider for Strapi Email plugin.","slug":"strapi-provider-email-mailgun","npmPackageName":"@strapi/provider-email-mailgun","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-email-mailgun","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FA4B4B'/><path d='M25 35 L50 25 L75 35 L50 78 Z' fill='white'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":540000}},{"id":107,"attributes":{"name":"Amazon SES Email Provider","description":"AWS SES email provider for sending high-volume emails directly via AWS credentials.","slug":"strapi-provider-email-amazon-ses","npmPackageName":"strapi-provider-email-amazon-ses","npmPackageUrl":"https://www.npmjs.com/package/strapi-provider-email-amazon-ses","repositoryUrl":"https://github.com/strapi/strapi-provider-email-amazon-ses","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF9900'/><rect x='22' y='32' width='56' height='36' rx='4' fill='%23232F3E'/><path d='M22 36 L50 56 L78 36' fill='none' stroke='white' stroke-width='4'/></svg>"},"developer":{"name":"Community"},"validated":true,"madeByStrapi":false,"downloads":480000}},{"id":108,"attributes":{"name":"Nodemailer Provider","description":"Custom SMTP / Nodemailer email provider for Strapi.","slug":"strapi-provider-email-nodemailer","npmPackageName":"@strapi/provider-email-nodemailer","npmPackageUrl":"https://www.npmjs.com/package/@strapi/provider-email-nodemailer","repositoryUrl":"https://github.com/strapi/strapi","logo":{"url":"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2322B8CF'/><path d='M20 30 L80 30 L50 56 Z' fill='%23FFFFFF'/><path d='M20 30 L50 56 L80 30 L80 70 L20 70 Z' fill='none' stroke='%23FFFFFF' stroke-width='4' stroke-linejoin='round'/></svg>"},"developer":{"name":"Strapi"},"validated":true,"madeByStrapi":true,"downloads":1200000}}];
+
+    window.fetch = function(url, init) {
+      if (typeof url === 'string') {
+        if (url.includes('market-api.strapi.io/plugins') || url.includes('/api/marketplace/plugins')) {
+          const searchMatch = url.match(/search=([^&]*)/);
+          const term = searchMatch ? decodeURIComponent(searchMatch[1]).toLowerCase() : '';
+          const filtered = term ? PLUGINS.filter(p => p.attributes.name.toLowerCase().includes(term) || p.attributes.description.toLowerCase().includes(term)) : PLUGINS;
+          const resObj = { data: filtered, meta: { pagination: { page: 1, pageSize: 24, pageCount: 1, total: filtered.length }, categories: {}, collections: {} } };
+          return Promise.resolve(new Response(JSON.stringify(resObj), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+        }
+        if (url.includes('market-api.strapi.io/providers') || url.includes('/api/marketplace/providers')) {
+          const searchMatch = url.match(/search=([^&]*)/);
+          const term = searchMatch ? decodeURIComponent(searchMatch[1]).toLowerCase() : '';
+          const filtered = term ? PROVIDERS.filter(p => p.attributes.name.toLowerCase().includes(term) || p.attributes.description.toLowerCase().includes(term)) : PROVIDERS;
+          const resObj = { data: filtered, meta: { pagination: { page: 1, pageSize: 24, pageCount: 1, total: filtered.length }, categories: {}, collections: {} } };
+          return Promise.resolve(new Response(JSON.stringify(resObj), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+        }
+      }
+      return origFetch.apply(this, arguments);
+    };
+  } catch (e) {}
+
+  // 5. Auto-select media asset when clicked so that opening the details modal also selects the image
+  try {
+    let isAutoClicking = false;
+    document.addEventListener(
+      'click',
+      function (e) {
+        if (isAutoClicking) return;
+
+        // If clicking directly on a checkbox or its label/wrapper, allow normal direct toggling
+        if (e.target.closest('input[type="checkbox"]') || e.target.closest('[data-strapi-checkbox]')) {
+          return;
+        }
+
+        // If clicking an explicit icon action button (e.g. pencil edit, trash delete), let it perform that action alone
+        if (e.target.closest('button[aria-label]')) {
+          return;
+        }
+
+        // Find the asset card container
+        const card = e.target.closest('[role="button"]');
+        if (!card) return;
+
+        // Find the card's checkbox
+        const checkbox = card.querySelector('input[type="checkbox"]');
+        if (checkbox && !checkbox.checked) {
+          isAutoClicking = true;
+          try {
+            checkbox.click();
+          } finally {
+            isAutoClicking = false;
+          }
+        }
+      },
+      true // Capture phase ensures selection triggers before the details modal takes focus
+    );
+  } catch (e) {}
+
+  // 6. Permanently remove any "Copy install command" buttons
+  try {
+    const hideCopyCommandButtons = () => {
+      document.querySelectorAll('button').forEach((btn) => {
+        const text = (btn.textContent || '').trim().toLowerCase();
+        if (text.includes('copy install command') || text.includes('copy command')) {
+          btn.style.display = 'none';
+          const parent = btn.closest('[data-testid*="tooltip-"]');
+          if (parent) parent.style.display = 'none';
+        }
+      });
+    };
+    hideCopyCommandButtons();
+    const copyObserver = new MutationObserver(hideCopyCommandButtons);
+    copyObserver.observe(document.body, { childList: true, subtree: true });
+  } catch (e) {}
+};
+
+export default {
+  config,
+  bootstrap,
+};

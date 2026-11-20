@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_property_locations",
+  "info": {
+    "displayName": "Property Location",
+    "icon": "pin",
+    "description": "Property map coordinates and neighbourhood places"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "map_title": {
+      "type": "string"
+    },
+    "open_url": {
+      "type": "string"
+    },
+    "open_label": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    }
+  }
+}

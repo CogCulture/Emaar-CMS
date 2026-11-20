@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_elements_community_cards",
+  "info": {
+    "displayName": "Community Card",
+    "icon": "home",
+    "description": "Signature community card with image, video and details"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "blurb": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

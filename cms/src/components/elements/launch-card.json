@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_elements_launch_cards",
+  "info": {
+    "displayName": "Launch Card",
+    "icon": "rocket",
+    "description": "Featured launch card with image and video preview"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "config": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

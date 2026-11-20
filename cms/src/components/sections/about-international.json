@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_about_internationals",
+  "info": {
+    "displayName": "About International Presence",
+    "icon": "globe",
+    "description": "Global presence countries and domain links"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.country-item"
+    }
+  }
+}

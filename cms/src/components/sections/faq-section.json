@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_faq_sections",
+  "info": {
+    "displayName": "FAQ Section",
+    "icon": "question-circle",
+    "description": "FAQ category block with expandable questions or downloadable factsheets"
+  },
+  "options": {},
+  "attributes": {
+    "category_number": {
+      "type": "string"
+    },
+    "nav_label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.faq-item"
+    }
+  }
+}

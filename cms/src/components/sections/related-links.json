@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_related_links",
+  "info": {
+    "displayName": "Related Links (Continue)",
+    "icon": "directions",
+    "description": "Bottom exploration and continue cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.related-link"
+    }
+  }
+}

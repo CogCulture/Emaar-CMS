@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_about_awards",
+  "info": {
+    "displayName": "About Featured Awards",
+    "icon": "award",
+    "description": "Featured recognition and award list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_href": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.award-item"
+    }
+  }
+}

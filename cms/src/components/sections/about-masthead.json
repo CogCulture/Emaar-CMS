@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_about_mastheads",
+  "info": {
+    "displayName": "About Masthead",
+    "icon": "info-circle",
+    "description": "About page header and overview narrative"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

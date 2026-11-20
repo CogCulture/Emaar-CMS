@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_navbars",
+  "info": {
+    "displayName": "Navigation Bar",
+    "icon": "bars",
+    "description": "Header navigation bar links, logo, phone, WhatsApp and CTAs"
+  },
+  "options": {},
+  "attributes": {
+    "logo_media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logo_src": {
+      "type": "string"
+    },
+    "logo_alt": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  }
+}

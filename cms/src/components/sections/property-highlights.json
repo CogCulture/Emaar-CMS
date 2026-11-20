@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_property_highlights",
+  "info": {
+    "displayName": "Property Highlights",
+    "icon": "star",
+    "description": "Property highlight cards with title, text, and media images"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.property-highlight"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_property_connectivities",
+  "info": {
+    "displayName": "Property Connectivity",
+    "icon": "globe",
+    "description": "Property transit, airport and road network connectivity"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.property-stat"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_legacy",
+  "info": {
+    "displayName": "Legacy Stats",
+    "icon": "award",
+    "description": "Brand legacy, story and key achievements"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.stat-item"
+    }
+  }
+}

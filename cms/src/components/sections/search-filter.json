@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_search_filters",
+  "info": {
+    "displayName": "Property Search & Filters",
+    "icon": "search",
+    "description": "Property search drawer, placeholder and filters"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "submit_label": {
+      "type": "string"
+    },
+    "results_path": {
+      "type": "string"
+    }
+  }
+}

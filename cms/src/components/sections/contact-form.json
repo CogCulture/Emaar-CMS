@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_contact_forms",
+  "info": {
+    "displayName": "Contact Form Section",
+    "icon": "envelope-open-text",
+    "description": "Tell us what you need enquiry form configuration"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "success_title": {
+      "type": "string"
+    },
+    "success_text": {
+      "type": "text"
+    }
+  }
+}

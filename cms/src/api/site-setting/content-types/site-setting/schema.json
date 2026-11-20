@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Global website settings synced from custom CMS"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand_title": {
+      "type": "string"
+    },
+    "site_logo": {
+      "type": "string"
+    },
+    "site_logo_alt": {
+      "type": "string"
+    },
+    "hero_video": {
+      "type": "string"
+    },
+    "hero_video_type": {
+      "type": "string"
+    },
+    "hero_search_placeholder": {
+      "type": "string"
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string"
+    },
+    "raw_settings": {
+      "type": "json"
+    }
+  }
+}

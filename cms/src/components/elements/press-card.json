@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_press_cards",
+  "info": {
+    "displayName": "Press Card",
+    "icon": "newspaper",
+    "description": "Press release or news card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

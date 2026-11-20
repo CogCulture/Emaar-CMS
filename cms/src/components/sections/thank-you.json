@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_sections_thank_yous",
+  "info": {
+    "displayName": "Thank You",
+    "icon": "check-circle",
+    "description": "Enquiry confirmation and contact channels"
+  },
+  "options": {},
+  "attributes": {
+    "kicker": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "phone_label_1": {
+      "type": "string"
+    },
+    "phone_value_1": {
+      "type": "string"
+    },
+    "phone_href_1": {
+      "type": "string"
+    },
+    "phone_label_2": {
+      "type": "string"
+    },
+    "phone_value_2": {
+      "type": "string"
+    },
+    "phone_href_2": {
+      "type": "string"
+    },
+    "back_label": {
+      "type": "string"
+    },
+    "back_href": {
+      "type": "string"
+    },
+    "contact_label": {
+      "type": "string"
+    },
+    "contact_href": {
+      "type": "string"
+    }
+  }
+}

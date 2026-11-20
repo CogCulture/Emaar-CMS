@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_press",
+  "info": {
+    "displayName": "Press Rail",
+    "icon": "newspaper",
+    "description": "Press releases and media announcements with repeatable cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "all_label": {
+      "type": "string"
+    },
+    "all_href": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.press-card"
+    }
+  }
+}

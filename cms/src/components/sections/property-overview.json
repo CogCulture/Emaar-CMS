@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_property_overviews",
+  "info": {
+    "displayName": "Property Overview",
+    "icon": "file-text",
+    "description": "Property project overview, lede, and key facts list"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "key_facts_label": {
+      "type": "string"
+    },
+    "key_facts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.property-fact"
+    }
+  }
+}

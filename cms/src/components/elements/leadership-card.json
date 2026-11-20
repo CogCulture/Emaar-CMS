@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_leadership_cards",
+  "info": {
+    "displayName": "Leadership Card",
+    "icon": "user-tie",
+    "description": "Leadership tier card with tag and title"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

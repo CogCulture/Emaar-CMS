@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_property_galleries",
+  "info": {
+    "displayName": "Property Gallery",
+    "icon": "picture",
+    "description": "Property photography gallery"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

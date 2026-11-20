@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_office_items",
+  "info": {
+    "displayName": "Office Item",
+    "icon": "building",
+    "description": "Office or sales centre location card"
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_href": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "string"
+    }
+  }
+}

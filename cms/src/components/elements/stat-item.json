@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_stat_items",
+  "info": {
+    "displayName": "Stat Item",
+    "icon": "chart-bar",
+    "description": "Key milestone or numerical achievement statistic"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "string"
+    }
+  }
+}

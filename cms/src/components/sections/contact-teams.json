@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_contact_teams",
+  "info": {
+    "displayName": "Contact Teams & Enquiries",
+    "icon": "user-friends",
+    "description": "Specialist department teams and scam alerts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "scam_title": {
+      "type": "string"
+    },
+    "scam_text": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.team-contact"
+    }
+  }
+}

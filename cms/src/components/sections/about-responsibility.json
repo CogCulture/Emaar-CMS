@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_about_responsibilities",
+  "info": {
+    "displayName": "About Governance & ESG",
+    "icon": "hand-holding-heart",
+    "description": "Governance, sustainability and Emaar foundation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.responsibility-item"
+    }
+  }
+}

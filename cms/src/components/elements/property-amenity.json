@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_property_amenities",
+  "info": {
+    "displayName": "Property Amenity",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

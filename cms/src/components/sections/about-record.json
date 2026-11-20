@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_about_records",
+  "info": {
+    "displayName": "About Track Record",
+    "icon": "trophy",
+    "description": "Milestone delivery metrics and landmark destinations"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.record-stat"
+    },
+    "split_title": {
+      "type": "string"
+    },
+    "split_text": {
+      "type": "text"
+    },
+    "split_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "split_cta_label": {
+      "type": "string"
+    },
+    "split_cta_href": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_sections_communities",
+  "info": {
+    "displayName": "Communities Collage",
+    "icon": "home",
+    "description": "Signature communities showcase with repeatable cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "intro_kicker": {
+      "type": "string"
+    },
+    "intro_cue": {
+      "type": "string"
+    },
+    "all_label": {
+      "type": "string"
+    },
+    "all_href": {
+      "type": "string"
+    },
+    "discover_label": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.community-card"
+    }
+  }
+}

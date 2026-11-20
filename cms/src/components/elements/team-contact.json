@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_team_contacts",
+  "info": {
+    "displayName": "Team Contact",
+    "icon": "users",
+    "description": "Specialist department contact card"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "email": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

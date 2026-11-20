@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_country_items",
+  "info": {
+    "displayName": "Country Item",
+    "icon": "globe",
+    "description": "International presence country and domain link"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

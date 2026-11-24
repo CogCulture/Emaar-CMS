@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import MobileDock from "@/components/MobileDock";
 import { EnquiryProvider } from "@/components/EnquiryModal";
 import { getPage } from "@/services/pageService";
+import CookieBanner from "@/components/CookieBanner";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -64,6 +65,7 @@ export default async function RootLayout({ children }) {
           {children}
           <Footer data={footer} />
           <MobileDock header={header} footer={footer} />
+          <CookieBanner />
         </EnquiryProvider>
       </body>
     </html>

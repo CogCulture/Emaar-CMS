@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PhoneIcon, WhatsappIcon } from "@/components/ui/icons";
 import { useEnquiry } from "@/components/EnquiryModal";
+import { INTRO_EVENT, T, markIntroDone, shouldPlayIntro } from "@/components/intro/introConfig";
 
 const LABEL = "font-nav text-[11.5px] font-semibold uppercase tracking-[0.13em] whitespace-nowrap";
 
@@ -28,7 +29,7 @@ export default function Header({ data }) {
   const isHome = pathname === "/";
   const { openEnquiry } = useEnquiry();
 
-  const [phase, setPhase] = useState("done"); // Default to done so nav is visible immediately
+  const [phase, setPhase] = useState("pre"); // pre -> intro -> done
   const [bg, setBg] = useState(isHome ? "top" : "solid"); // top | glass | solid
   const [mega, setMega] = useState(null);
 
@@ -36,49 +37,58 @@ export default function Header({ data }) {
   const headerRef = useRef(null);
   const closeTimer = useRef(null);
 
-  // ---------- Logo intro: center -> top-left ----------
-  useLayoutEffect(() => {
-    const el = logoRef.current;
-    const skip =
-      !isHome ||
-      sessionStorage.getItem("introDone") ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // ---------- Logo intro: HomeLoader ke saath sync ----------
+useLayoutEffect(() => {
+  const el = logoRef.current;
+  if (!el || !shouldPlayIntro(isHome)) {
+    markIntroDone(); // dusre page pe land kiya ya reduced-motion: baad me Home pe loader nahi
+    setPhase("done");
+    return;
+  }
 
-    if (!el || skip) {
-      setPhase("done");
-      return;
-    }
+  // Asli jagah naapo, phir center me bhejo
+  el.style.transition = "none";
+  el.style.transform = "none";
+  el.style.opacity = "0";
+  const r = el.getBoundingClientRect();
+  const scale = Math.min(window.innerWidth * 0.6, 440) / r.width;
+const dx = document.documentElement.clientWidth / 2 - (r.left + r.width / 2);
+  const dy = window.innerHeight / 2 - (r.top + r.height / 2);
 
-    const r = el.getBoundingClientRect();
-    const scale = Math.min(window.innerWidth * 0.6, 300) / r.width;
-    const dx = window.innerWidth / 2 - (r.left + r.width / 2);
-    const dy = window.innerHeight / 2 - (r.top + r.height / 2);
+  // Loader isse line/text ki jagah nikalta hai
+  document.documentElement.style.setProperty("--intro-logo-h", `${r.height * scale}px`);
 
-    el.style.transition = "none";
-    el.style.transformOrigin = "center";
-    el.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
-    document.body.style.overflow = "hidden";
-    setPhase("intro");
+  el.style.transformOrigin = "center";
+  el.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+  setPhase("intro");
 
-    const t1 = setTimeout(() => {
-      el.style.transition = "transform 1.2s cubic-bezier(.77,0,.18,1)";
-      el.style.transform = "none";
-    }, 900);
-    const t2 = setTimeout(() => {
+  // Center pe dheere fade-in
+  const fadeIn = setTimeout(() => {
+    el.style.transition = `opacity ${T.logoIn}ms ease`;
+    el.style.opacity = "1";
+  }, 60);
+
+  // Loader ka signal aate hi header me merge
+  let done;
+  const fly = () => {
+    el.style.transition = `transform ${T.flyDur}ms cubic-bezier(.77,0,.18,1)`;
+    el.style.transform = "none";
+    done = setTimeout(() => {
       el.style.transition = "";
       el.style.transformOrigin = "";
-      document.body.style.overflow = "";
-      sessionStorage.setItem("introDone", "1");
+      el.style.opacity = "";
       setPhase("done");
-    }, 2200);
+    }, T.flyDur);
+  };
+  window.addEventListener(INTRO_EVENT, fly, { once: true });
 
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      document.body.style.overflow = "";
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  return () => {
+    clearTimeout(fadeIn);
+    clearTimeout(done);
+    window.removeEventListener(INTRO_EVENT, fly);
+  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   // ---------- Scroll: top -> glass -> solid ----------
   useEffect(() => {
@@ -217,19 +227,6 @@ export default function Header({ data }) {
             >
               <PhoneIcon />
             </a>
-
-            <button
-              type="button"
-              aria-label="Open menu"
-              onClick={() => window.dispatchEvent(new Event("open-mobile-menu"))}
-              className="hdr-reveal hdr-icon inline-flex min-h-[44px] min-w-[44px] items-center justify-center lg:hidden"
-            >
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            </button>
 
             <a
               href={contact.whatsapp}

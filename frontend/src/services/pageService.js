@@ -4,10 +4,41 @@ import { home } from "@/data/home";
 import { about } from "@/data/about";
 import { contact } from "@/data/contact";
 import { faq } from "@/data/faq";
+import { foundation } from "@/data/foundation";
+import { awards } from "@/data/awards";
+import { environmentalPolicy } from "@/data/environmentalPolicy";
+import { investor } from "@/data/investor";
+import { media } from "@/data/media";
+import { compliance } from "@/data/compliance";
+import { blog } from "@/data/blog";
+import { careers } from "@/data/careers";
+import { privacyPolicy } from "@/data/privacyPolicy";
+import { terms } from "@/data/terms";
 import { getStrapiContent } from "@/services/strapiService";
 import { getStrapiMedia } from "@/utils/media";
 
-const mock = { header, footer, home, about, contact, faq };
+const mock = {
+  header,
+  footer,
+  home,
+  about,
+  contact,
+  faq,
+  foundation,
+  awards,
+  environmentalPolicy,
+  investor,
+  media,
+  compliance,
+  blog,
+  careers,
+  privacyPolicy,
+  terms,
+  "about-emaar": about,
+  "contact-us": contact,
+  "terms-and-conditions": terms,
+  "privacy-policy": privacyPolicy,
+};
 
 function resolveSeo(strapiSeo, fallbackSeo) {
   if (!strapiSeo) return fallbackSeo || {};
@@ -745,6 +776,17 @@ export async function getPage(slug, { revalidate = 0 } = {}) {
             description: "Your enquiry has been sent.",
           }),
           ...(tySec || defaultData),
+        };
+      }
+
+      // 8. General Strapi Page fallback for all other routes
+      const generalPage = pages.find((p) => p.slug === slug || p.slug === slug.replace(/^\//, "") || p.slug === slug.replace(/\//g, "-"));
+      if (generalPage && mock[slug]) {
+        return {
+          ...mock[slug],
+          seo: resolveSeo(generalPage.seo, mock[slug]?.seo),
+          ...(generalPage.heading ? { heading: generalPage.heading } : {}),
+          ...(generalPage.description ? { description: generalPage.description } : {}),
         };
       }
     }

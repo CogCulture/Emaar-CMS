@@ -362,6 +362,98 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface AdminWorkflow extends Schema.CollectionType {
+  collectionName: 'strapi_workflows';
+  info: {
+    name: 'Workflow';
+    description: '';
+    singularName: 'workflow';
+    pluralName: 'workflows';
+    displayName: 'Workflow';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    stages: Attribute.Relation<
+      'admin::workflow',
+      'oneToMany',
+      'admin::workflow-stage'
+    >;
+    contentTypes: Attribute.JSON & Attribute.Required & Attribute.DefaultTo<[]>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'admin::workflow',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'admin::workflow',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface AdminWorkflowStage extends Schema.CollectionType {
+  collectionName: 'strapi_workflows_stages';
+  info: {
+    name: 'Workflow Stage';
+    description: '';
+    singularName: 'workflow-stage';
+    pluralName: 'workflow-stages';
+    displayName: 'Stages';
+  };
+  options: {
+    version: '1.1.0';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String;
+    color: Attribute.String & Attribute.DefaultTo<'#4945FF'>;
+    workflow: Attribute.Relation<
+      'admin::workflow-stage',
+      'manyToOne',
+      'admin::workflow'
+    >;
+    permissions: Attribute.Relation<
+      'admin::workflow-stage',
+      'manyToMany',
+      'admin::permission'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'admin::workflow-stage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'admin::workflow-stage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -785,6 +877,16 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -843,6 +945,16 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -880,6 +992,16 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::author.author',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::author.author',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -917,6 +1039,16 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -991,6 +1123,16 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
       'api::global.global'
     >;
     locale: Attribute.String;
+    strapi_stage: Attribute.Relation<
+      'api::global.global',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::global.global',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -1030,6 +1172,16 @@ export interface ApiLeadFormSubmissionLeadFormSubmission
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::lead-form-submission.lead-form-submission',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::lead-form-submission.lead-form-submission',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -1146,6 +1298,16 @@ export interface ApiPagePage extends Schema.CollectionType {
       'api::page.page'
     >;
     locale: Attribute.String;
+    strapi_stage: Attribute.Relation<
+      'api::page.page',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::page.page',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -1177,6 +1339,16 @@ export interface ApiProductFeatureProductFeature extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::product-feature.product-feature',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::product-feature.product-feature',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -1215,6 +1387,16 @@ export interface ApiSiteSectionSiteSection extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::site-section.site-section',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::site-section.site-section',
+      'oneToOne',
+      'admin::user'
+    >;
   };
 }
 
@@ -1253,6 +1435,57 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    strapi_stage: Attribute.Relation<
+      'api::site-setting.site-setting',
+      'oneToOne',
+      'admin::workflow-stage'
+    >;
+    strapi_assignee: Attribute.Relation<
+      'api::site-setting.site-setting',
+      'oneToOne',
+      'admin::user'
+    >;
+  };
+}
+
+export interface AdminAuditLog extends Schema.CollectionType {
+  collectionName: 'strapi_audit_logs';
+  info: {
+    singularName: 'audit-log';
+    pluralName: 'audit-logs';
+    displayName: 'Audit Log';
+  };
+  options: {
+    draftAndPublish: false;
+    timestamps: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    action: Attribute.String & Attribute.Required;
+    date: Attribute.DateTime & Attribute.Required;
+    user: Attribute.Relation<'admin::audit-log', 'oneToOne', 'admin::user'>;
+    payload: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'admin::audit-log',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'admin::audit-log',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -1266,6 +1499,8 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'admin::workflow': AdminWorkflow;
+      'admin::workflow-stage': AdminWorkflowStage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -1283,6 +1518,7 @@ declare module '@strapi/types' {
       'api::product-feature.product-feature': ApiProductFeatureProductFeature;
       'api::site-section.site-section': ApiSiteSectionSiteSection;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
+      'admin::audit-log': AdminAuditLog;
     }
   }
 }

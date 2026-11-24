@@ -9,7 +9,6 @@
     "build": "node node_modules/@strapi/strapi/bin/strapi.js build",
     "strapi": "node node_modules/@strapi/strapi/bin/strapi.js"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-cloud": "4.25.6",
     "@strapi/plugin-i18n": "4.25.6",
@@ -20,6 +19,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "sharp": "^0.35.5",
     "styled-components": "5.3.3"
   },
   "author": {

@@ -22,6 +22,34 @@ const nextConfig = {
         source: "/uploads/:path*",
         destination: `${strapiUrl}/uploads/:path*`,
       },
+      {
+        source: "/admin",
+        destination: `${strapiUrl}/admin`,
+      },
+      {
+        source: "/admin/:path*",
+        destination: `${strapiUrl}/admin/:path*`,
+      },
+      {
+        source: "/content-manager/:path*",
+        destination: `${strapiUrl}/content-manager/:path*`,
+      },
+      {
+        source: "/content-type-builder/:path*",
+        destination: `${strapiUrl}/content-type-builder/:path*`,
+      },
+      {
+        source: "/upload/:path*",
+        destination: `${strapiUrl}/upload/:path*`,
+      },
+      {
+        source: "/users-permissions/:path*",
+        destination: `${strapiUrl}/users-permissions/:path*`,
+      },
+      {
+        source: "/i18n/:path*",
+        destination: `${strapiUrl}/i18n/:path*`,
+      },
     ];
   },
 };

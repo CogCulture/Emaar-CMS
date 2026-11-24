@@ -10,6 +10,7 @@ import ShowcaseMosaic from "@/components/home/ShowcaseMosaic";
 import LegacyStats from "@/components/home/LegacyStats";
 import PressRail from "@/components/home/PressRail";
 import ConverseCta from "@/components/home/ConverseCta";
+import HomeLoader from "@/components/intro/HomeLoader";
 
 export const dynamic = "force-dynamic";
 
@@ -30,20 +31,23 @@ export default async function Home() {
   if (!page) notFound();
 
   return (
-    <ScrollStage>
-      <Hero data={page.hero}>
-        <HeroSearch data={page.search} />
-      </Hero>
-      <LaunchStack data={page.launches} />
-      <DevelopmentsRail data={page.developments} />
-      <DevelopmentsRail data={page.underDevelopment} />
-      <LaunchStack data={page.communitiesIntro} />
-      <CommunitiesCollage data={page.communities} />
-      <LaunchStack data={page.propertiesIntro} />
-      <ShowcaseMosaic data={page.showcase} />
-      <LegacyStats data={page.legacy} />
-      <PressRail data={page.press} />
-      <ConverseCta data={page.converse} />
-    </ScrollStage>
+    <>
+      <HomeLoader data={page.loader} />
+      <ScrollStage>
+        <Hero data={page.hero}>
+          <HeroSearch data={page.search} />
+        </Hero>
+        <LaunchStack data={page.launches} />
+        <DevelopmentsRail data={page.developments} />
+        <DevelopmentsRail data={page.underDevelopment} />
+        <LaunchStack data={page.communitiesIntro} />
+        <CommunitiesCollage data={page.communities} />
+        <LaunchStack data={page.propertiesIntro} />
+        <ShowcaseMosaic data={page.showcase} />
+        <LegacyStats data={page.legacy} />
+        <PressRail data={page.press} />
+        <ConverseCta data={page.converse} />
+      </ScrollStage>
+    </>
   );
 }

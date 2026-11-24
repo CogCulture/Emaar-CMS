@@ -228,9 +228,9 @@ export const home = {
         blurb: "Marbella brings together Spanish-inspired architecture, spacious luxury villas and landscaped surroundings in Sector 66, Gurugram. A private, considered setting that offers the freedom to make every space your own.",
         href: "/marbella",
         images: [
-          { src: "/images/communities/Marbella1.webp", alt: "Marbella villas" },
-          { src: "/images/communities/Marbella2.webp", alt: "Marbella clubhouse and pool" },
-          { src: "/images/communities/Marbella3.webp", alt: "Marbella residence balcony" },
+          { src: "/images/communities/Marbella01.webp", alt: "Marbella villas" },
+          { src: "/images/communities/Marbella02.webp", alt: "Marbella clubhouse and pool" },
+          { src: "/images/communities/Marbella03.webp", alt: "Marbella residence balcony" },
         ],
         video: { src: "/videos/marbella.mp4", poster: "/images/communities/marbella.png", label: "Marbella film" },
       },
@@ -325,4 +325,9 @@ export const home = {
     video: { src: "/videos/emaar-india-journey.mp4", poster: "/images/converse/poster.jpg", label: "Emaar India building at night" },
     cta: { label: "Chat with us", href: "https://wa.me/911234567890", external: true, icon: "whatsapp" },
   },
+  loader: {
+  image: "/images/hero-poster.png", // abhi placeholder, baad me video ka first frame
+  alt: "",
+  tagline: "130,900 Homes. And counting.",
+},
 };
